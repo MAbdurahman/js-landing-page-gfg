@@ -22,4 +22,10 @@
 - Includes a testimonial section
 
 ## To use
-<p>Clone or download the repository and open the `index.html` file in your browser.</p>
+<p>Clone or download the repository</p>
+
+```shell
+https://github.com/MAbdurahman/js-landing-page-gfg.git
+
+```
+<p>Then, in the browser open the index.html file</p>
