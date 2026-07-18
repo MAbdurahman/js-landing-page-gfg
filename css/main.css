@@ -264,3 +264,63 @@ p {
 small {
    font-size: 0.8rem;
 }
+
+
+/*===============================================================
+          navigation
+==================================================================*/
+
+.menu-button {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100px;
+   height: 100px;
+   cursor: pointer;
+   background-color: transparent;
+}
+
+.menu-button-bar {
+   position: relative;
+   transition: all 0.3s ease-in-out;
+}
+
+.menu-button-bar,
+.menu-button-bar::before,
+.menu-button-bar::after {
+   display: block;
+   width: 70%;
+   height: 8px;
+   background-color: var(--color-neutral-800);
+   border-radius: 4px;
+}
+
+.menu-button-bar::before,
+.menu-button-bar::after {
+   content: "";
+   position: absolute;
+   left: 0;
+   width: 100%;
+}
+.menu-button-bar::before {
+   top: 20px;
+   transition: top 0.3s 0.3s cubic-bezier(0.23, 1, 0.32, 1), transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.menu-button-bar::after {
+   bottom: 20px;
+   transition: bottom 0.3s 0.3s cubic-bezier(0.23, 1, 0.32, 1), transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+#menuButton.is-open .menu-button-bar {
+   background-color: transparent;
+}
+#menuButton.is-open .menu-button-bar::before {
+   top: 0;
+   transition: top 0.3s cubic-bezier(0.23, 1, 0.32, 1), transform 0.3s 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+   transform: rotate(-45deg);
+}
+#menuButton.is-open .menu-button-bar::after {
+   bottom: 0;
+   transition: bottom 0.3s cubic-bezier(0.23, 1, 0.32, 1), transform 0.3s 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+   transform: rotate(45deg);
+}
