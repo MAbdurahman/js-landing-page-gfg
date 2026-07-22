@@ -54,16 +54,16 @@
    --font-weight-bold: 800;
    --font-weight-black: 900;
    /************************* colors *************************/
-   --color-bright-blue-01-000: hsl(277, 77%, 95%);
-   --color-bright-blue-01-100: hsl(277, 77%, 90%);
-   --color-bright-blue-01-200: hsl(277, 77%, 80%);
-   --color-bright-blue-01-300: hsl(277, 77%, 75%);
-   --color-bright-blue-01-400: hsl(277, 77%, 70%);
-   --color-bright-blue-01-500: hsl(277, 77%, 65%);
-   --color-bright-blue-01-600: hsl(277, 77%, 55%);
-   --color-bright-blue-01-700: hsl(277, 77%, 50%);
-   --color-bright-blue-01-800: hsl(277, 77%, 45%);
-   --color-bright-blue-01-900: hsl(277, 77%, 35%);
+   --color-primary-000: hsl(277, 77%, 95%);
+   --color-primary-100: hsl(277, 77%, 90%);
+   --color-primary-200: hsl(277, 77%, 80%);
+   --color-primary-300: hsl(277, 77%, 75%);
+   --color-primary-400: hsl(277, 77%, 70%);
+   --color-primary-500: hsl(277, 77%, 65%);
+   --color-primary-600: hsl(277, 77%, 55%);
+   --color-primary-700: hsl(277, 77%, 50%);
+   --color-primary-800: hsl(277, 77%, 45%);
+   --color-primary-900: hsl(277, 77%, 35%);
    /* neutral colors */
    --color-neutral-001: #fafafa;
    --color-neutral-000: hsl(277, 0%, 98%);
@@ -176,21 +176,22 @@
 }
 
 html {
-   height: 100dvh;
-   width: 100dvw;
-   font-size: 10px;
-   font-size: 62.5%;
+   width: 100vw;
+   height: 100vh;
+   min-width: 100vw;
+   min-height: 100vh;
    scroll-behavior: smooth;
    scrollbar-width: none;
    overflow-x: hidden;
    -ms-overflow-style: none;
+   font-size: 100%;
 }
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+/*@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
    html {
       font-size: 50%;
    }
-}
+}*/
 
 body {
    position: relative;
@@ -203,7 +204,6 @@ body {
    font-weight: 400;
    font-style: normal;
    font-optical-sizing: auto;
-   text-align: center;
    text-rendering: optimizeLegibility;
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
@@ -265,11 +265,87 @@ small {
    font-size: 0.8rem;
 }
 
+ul {
+   list-style: none;
+}
+
+a {
+   text-decoration: none;
+}
+
+
+/*===============================================================
+          utility classes
+==================================================================*/
+
 
 /*===============================================================
           navigation
 ==================================================================*/
+.navbar {
+   position: fixed;
+   isolation: isolate;
+   width: 100%;
+   z-index: 9;
+}
 
+.header-navbar {
+   padding: 1em;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.navbar-logo a {
+
+}
+
+.navbar-logo-brand {
+   font-size: 1.25rem;
+   font-weight: 800;
+   color: var(--color-primary-900);
+   line-height: 1.5rem;
+}
+
+.navbar-nav {
+ /*position: relative;*/
+}
+
+.navbar-list {
+   position: absolute;
+   top: -100%;
+   left: 0;
+   width: 100%;
+   height: 75%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 2rem;
+   padding: 2em;
+   background-color: var(--color-neutral-200);
+   transition: transform 0.5s;
+   z-index: -1;
+}
+
+.navbar-list.is-open {
+   transform: translateY(150%);
+}
+
+.navbar-list-link {
+   font-size: 1rem;
+   font-weight: 600;
+   text-transform: capitalize;
+   color: var(--color-primary-900);
+   white-space: nowrap;
+}
+
+.navbar-buttons {
+   display: flex;
+   flex-direction: row;
+   gap: -1rem;
+}
 .menu-button {
    display: flex;
    align-items: center;
@@ -278,6 +354,8 @@ small {
    height: 100px;
    cursor: pointer;
    background-color: transparent;
+   border: none;
+   transition: 0.2s ease-in-out;
 }
 
 .menu-button-bar {
@@ -289,10 +367,10 @@ small {
 .menu-button-bar::before,
 .menu-button-bar::after {
    display: block;
-   width: 70%;
-   height: 8px;
+   width: 40%;
+   height: 4px;
    background-color: var(--color-neutral-800);
-   border-radius: 4px;
+   border-radius: 3px;
 }
 
 .menu-button-bar::before,
@@ -303,11 +381,11 @@ small {
    width: 100%;
 }
 .menu-button-bar::before {
-   top: 20px;
+   top: 12px;
    transition: top 0.3s 0.3s cubic-bezier(0.23, 1, 0.32, 1), transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
 }
 .menu-button-bar::after {
-   bottom: 20px;
+   bottom: 12px;
    transition: bottom 0.3s 0.3s cubic-bezier(0.23, 1, 0.32, 1), transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
@@ -323,4 +401,56 @@ small {
    bottom: 0;
    transition: bottom 0.3s cubic-bezier(0.23, 1, 0.32, 1), transform 0.3s 0.3s cubic-bezier(0.23, 1, 0.32, 1);
    transform: rotate(45deg);
+}
+
+#menuButton {
+   /*display: none;*/
+}
+
+/*===============================================================
+          notification keyframes
+==================================================================*/
+.move-in-from-right {
+   animation-name: move-in-from-right;
+   animation-duration: 1s;
+   animation-iteration-count: 1;
+   animation-timing-function: ease;
+}
+
+.exit-to-left {
+   animation-name: exit-to-left;
+   animation-duration: 1s;
+   animation-iteration-count: 1;
+   animation-timing-function: ease;
+   animation-fill-mode: forwards;
+}
+
+@keyframes move-in-from-right {
+   0% {
+      opacity: 0;
+      transform: translateX(2000px);
+   }
+   60% {
+      opacity: 1;
+      transform: translateX(-50px);
+   }
+   80% {
+      transform: translateX(10px);
+   }
+   100% {
+      transform: translateX(0);
+   }
+}
+
+@keyframes exit-to-left {
+   0% {
+      opacity: 1;
+      transform: translateX(0);
+   }
+   50% {
+      transform: translateX(50px);
+   }
+   100% {
+      transform: translateX(-2000px);
+   }
 }

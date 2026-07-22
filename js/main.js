@@ -6,14 +6,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
    console.log('DOMContentLoaded has loaded!');
 
+   const lightDarkButton = document.getElementById('lightDarkButton');
    const icon = document.getElementById('lightDarkIcon');
-   
-   document.querySelector('#lightDarkButton').addEventListener('click', function () {
+   const menuButton = document.getElementById('menuButton');
+   const navbarList = document.getElementById('navbarList');
+
+
+   lightDarkButton.addEventListener('click', function () {
       icon.src = icon.src.includes('moon') ? './assets/img/sun.png' : './assets/img/moon.png';
    });
 
-   document.querySelector('#menuButton').addEventListener('click', function () {
+   menuButton.addEventListener('click', function () {
       this.classList.toggle('is-open');
+      navbarList.classList.toggle('is-open');
+
    });
 
 

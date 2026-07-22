@@ -18,14 +18,41 @@
     <title>DigitalAgency</title>
 </head>
 <body>
-<h1>Welcome To Landing Page</h1>
-<nav>
-    <button id='lightDarkButton' class='menu-button'>
-        <img id='lightDarkIcon' alt='moon or sun' src='./assets/img/moon.png'>
-    </button>
-    <button class='menu-button' id='menuButton' type='button'>
-        <span class='menu-button-bar'></span>
-    </button>
-</nav>
+<!-- header and navigation -->
+<header class='header'>
+    <section class='header-navbar'>
+        <div class='navbar-logo'>
+            <a class='navbar-logo-brand' href='#'>Agency<span>AI</span></a>
+        </div>
+        <nav class='navbar-nav' id='navbar'>
+            <ul class='navbar-list' id='navbarList'>
+                <li class='navbar-list-item'>
+                    <a class='navbar-list-link active' href='#home'>home</a>
+                </li>
+                <li class='navbar-list-item'>
+                    <a class='navbar-list-link' href='#about'>about</a>
+                </li>
+                <li class='navbar-list-item'>
+                    <a class='navbar-list-link' href='#services'>services</a>
+                </li>
+                <li class='navbar-list-item'>
+                    <a class='navbar-list-link' href='#team'>team</a>
+                </li>
+                <li class='navbar-list-item'>
+                    <a class='navbar-list-link' href='#contact'>contact</a>
+                </li>
+            </ul>
+        </nav>
+        <div class='navbar-buttons'>
+            <button class='menu-button' id='lightDarkButton' type='button'>
+                <img alt='moon or sun' id='lightDarkIcon'
+                     src='./assets/img/moon.png' width='40' height='40'/>
+            </button>
+            <button class='menu-button' id='menuButton' type='button'>
+                <span class='menu-button-bar'></span>
+            </button>
+        </div>
+    </section>
+</header>
 </body>
 </html>
