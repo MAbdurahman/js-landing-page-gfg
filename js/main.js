@@ -22,6 +22,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
    });
 
+   navbarList.addEventListener('click', function () {
+      this.classList.toggle('is-open');
+      menuButton.classList.toggle('is-open');
+
+   })
+
 
 
 
