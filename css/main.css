@@ -277,6 +277,47 @@ a {
 /*===============================================================
           utility classes
 ==================================================================*/
+.utils-container-fluid {
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+   padding-left: 16px;
+   padding-right: 16px;
+}
+
+.utils-container {
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+   padding-left: 16px;
+   padding-right: 16px;
+}
+
+@media (min-width: 576px) {
+   .utils-container {
+      max-width: 544px;
+   }
+}
+@media (min-width: 768px) {
+   .utils-container {
+      max-width: 720px;
+   }
+}
+@media (min-width: 992px) {
+   .utils-container {
+      max-width: 960px;
+   }
+}
+/*@media (min-width: 1200px) {
+  .utils-container {
+    max-width: 1236px;
+  }
+}*/
+@media (min-width: 1360px) {
+   .utils-container {
+      max-width: 1240px;
+   }
+}
 
 
 /*===============================================================
@@ -351,11 +392,24 @@ a {
    white-space: nowrap;
 }
 
+
+
 .navbar-buttons {
    display: flex;
    flex-direction: row;
    gap: -1rem;
 }
+
+.cta-button {
+   display: flex;
+   justify-content: end;
+   align-items: center;
+   font-size: 1rem;
+   font-weight: 600;
+   text-transform: capitalize;
+   color: var(--color-primary-900);
+}
+
 .menu-button {
    display: flex;
    align-items: center;
@@ -413,8 +467,35 @@ a {
    transform: rotate(45deg);
 }
 
-#menuButton {
-   /*display: none;*/
+#ctaButton {
+   display: none;
+}
+
+@media screen and (min-width: 769px) {
+   .navbar-list {
+      position: static;
+      top: 0;
+      left: 0;
+      width: auto;
+      height: auto;
+      flex-direction: row;
+      justify-content: flex-start;
+      gap: 1rem;
+      padding: 0;
+      background-color: transparent;
+   }
+
+   .navbar-list.is-open {
+      transform: translateY(0);
+   }
+
+   #menuButton {
+      display: none;
+   }
+   #ctaButton {
+      display: inline-block;
+      margin-left: 2rem;
+   }
 }
 
 /*===============================================================
