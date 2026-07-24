@@ -323,6 +323,43 @@ a {
 }
 
 /*===============================================================
+       preloader styles
+==================================================================*/
+.preloader {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   width: 100vw;
+   height: 100vh;
+   z-index: 10000;
+   overflow: hidden;
+   background: var(--color-neutral-100);
+   display: -webkit-box;
+   display: flex;
+   -webkit-box-align: center;
+   align-items: center;
+   -webkit-box-pack: center;
+   justify-content: center;
+   scrollbar-width: none;
+   -ms-overflow-style: none;
+
+}
+.preloader-gif {
+   width: 25%;
+   align-self: center;
+}
+
+/* Extra Small Devices (Landscape Phones & Portrait Tablets) */
+@media (max-width: 767px) {
+   .preloader-gif {
+      width: 50%;
+
+   }
+}
+
+/*===============================================================
           preloader keyframes
 ==================================================================*/
 @keyframes fadeIn {
@@ -340,7 +377,7 @@ a {
 .header {
    width: 100%;
    height: 80px;
-   background-color: var(--color-neutral-400);
+   background-color: var(--color-neutral-200);
    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
    box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.2);
 }
@@ -400,10 +437,21 @@ a {
 
 .navbar-list-link {
    font-size: 1rem;
-   font-weight: 600;
+   font-weight: 700;
    text-transform: capitalize;
    color: var(--color-primary-900);
    white-space: nowrap;
+   transition: color 0.5s, transform 0.5s;
+}
+.navbar-list-link:hover,
+.navbar-list-link:focus,
+.navbar-list-link:active{
+   color: var(--color-primary-600);
+}
+
+.navbar-list-link.active {
+   color: var(--color-primary-600);
+   transform: scale(1.25);
 }
 
 .navbar-buttons {

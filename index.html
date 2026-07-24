@@ -18,6 +18,10 @@
     <title>AgencyAI</title>
 </head>
 <body>
+<!-- preloader -->
+<section id="preloader" class="preloader">
+    <img src='./assets/gif/preloader.gif' alt="2-gears" id="preloader-gif" class="preloader-gif"/>
+</section>
 <!-- header and navigation -->
 <header class='header'>
     <section class='header-navbar utils-container'>
@@ -27,7 +31,7 @@
         <nav class='navbar-nav' id='navbar'>
             <ul class='navbar-list' id='navbarList'>
                 <li class='navbar-list-item'>
-                    <a class='navbar-list-link active' href='#home'>home</a>
+                    <a class='navbar-list-link' href='#home'>home</a>
                 </li>
                 <li class='navbar-list-item'>
                     <a class='navbar-list-link' href='#about'>about</a>
@@ -48,8 +52,7 @@
         
         </nav>
         <div class='navbar-buttons'>
-            <button class='cta-button' id='ctaButton' type='button'>Start Now
-            </button>
+            <a class='cta-button' id='ctaButton' href='#'>Start Now</a>
             <button class='menu-button' id='lightDarkButton' type='button'>
                 <img alt='moon or sun' height='40'
                      id='lightDarkIcon' src='./assets/img/moon.png' width='40'/>
