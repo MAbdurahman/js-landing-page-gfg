@@ -298,16 +298,19 @@ a {
       max-width: 544px;
    }
 }
+
 @media (min-width: 768px) {
    .utils-container {
       max-width: 720px;
    }
 }
+
 @media (min-width: 992px) {
    .utils-container {
       max-width: 960px;
    }
 }
+
 /*@media (min-width: 1200px) {
   .utils-container {
     max-width: 1236px;
@@ -319,6 +322,17 @@ a {
    }
 }
 
+/*===============================================================
+          preloader keyframes
+==================================================================*/
+@keyframes fadeIn {
+   from {
+      opacity: 0;
+   }
+   to {
+      opacity: 1;
+   }
+}
 
 /*===============================================================
           navigation
@@ -360,7 +374,7 @@ a {
 }
 
 .navbar-nav {
- /*position: relative;*/
+   /*position: relative;*/
 }
 
 .navbar-list {
@@ -392,22 +406,12 @@ a {
    white-space: nowrap;
 }
 
-
-
 .navbar-buttons {
    display: flex;
    flex-direction: row;
-   gap: -1rem;
-}
-
-.cta-button {
-   display: flex;
-   justify-content: end;
+   justify-content: center;
    align-items: center;
-   font-size: 1rem;
-   font-weight: 600;
-   text-transform: capitalize;
-   color: var(--color-primary-900);
+   gap: -1rem;
 }
 
 .menu-button {
@@ -444,10 +448,12 @@ a {
    left: 0;
    width: 100%;
 }
+
 .menu-button-bar::before {
    top: 12px;
    transition: top 0.3s 0.3s cubic-bezier(0.23, 1, 0.32, 1), transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
 }
+
 .menu-button-bar::after {
    bottom: 12px;
    transition: bottom 0.3s 0.3s cubic-bezier(0.23, 1, 0.32, 1), transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
@@ -456,22 +462,137 @@ a {
 #menuButton.is-open .menu-button-bar {
    background-color: transparent;
 }
+
 #menuButton.is-open .menu-button-bar::before {
    top: 0;
    transition: top 0.3s cubic-bezier(0.23, 1, 0.32, 1), transform 0.3s 0.3s cubic-bezier(0.23, 1, 0.32, 1);
    transform: rotate(-45deg);
 }
+
 #menuButton.is-open .menu-button-bar::after {
    bottom: 0;
    transition: bottom 0.3s cubic-bezier(0.23, 1, 0.32, 1), transform 0.3s 0.3s cubic-bezier(0.23, 1, 0.32, 1);
    transform: rotate(45deg);
 }
 
+button[class^='cta-button'],
+a[class^='cta-button'] {
+   position: relative;
+   min-width: 120px;
+   height: 48px;
+   z-index: 1;
+   overflow: hidden;
+   padding: 8px 16px;
+   margin-top: 4px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-weight: 700;
+   letter-spacing: 1px;
+   color: var(--color-neutral-200);
+   background-color: var(--color-primary-900);
+   border: 1px solid var(--color-primary-900);
+   border-radius: 3px;
+   cursor: pointer;
+   transition: background-color 0.3s, color 0.3s, opacity 0.3s;
+   -webkit-transition: background-color 0.3s, color 0.3s, opacity 0.3s;
+}
+
+button[class^='cta-button']:focus,
+button[class^='cta-button']:hover,
+a[class^='cta-button']:focus,
+a[class^='cta-button']:hover {
+   background-color: var(--color-primary-800);
+   color: var(--color-neutral-100);
+   outline: none;
+   transition: background-color 0.3s, color 0.3s;
+   -webkit-transition: background-color 0.3s, color 0.3s;
+   animation: call-to-action-one 0.3s forwards;
+   -webkit-animation: call-to-action-one 0.3s forwards;
+}
+
+button[class^='cta-button']::before,
+a[class^='cta-button']::before {
+   content: '';
+   position: absolute;
+   top: -20px;
+   left: -20px;
+   right: -20px;
+   bottom: -20px;
+   z-index: -1;
+   background-color: inherit;
+   border-radius: 3px;
+   opacity: 0.4;
+   transform: scale3d(0.8, .0 .5, 0.3);
+   -webkit-transform: scale3d(0.8, .0 .5, 0.3);
+
+}
+
+button[class^='cta-button']:hover::before,
+a[class^='cta-button']:hover::before {
+   animation: call-to-action-two 0.3s 0.3s forwards;
+   -webkit-animation: call-to-action-two 0.3s 0.3s forwards;
+
+}
+
+/*===============================================================
+          cta-button keyframes
+==================================================================*/
+@-webkit-keyframes call-to-action-one {
+   60% {
+      -webkit-transform: scale3d(0.8, 0.8, 1);
+      transform: scale3d(0.8, 0.8, 1);
+   }
+   85% {
+      -webkit-transform: scale3d(1.1, 1.1, 1);
+      transform: scale3d(1.1, 1.1, 1);
+   }
+   100% {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+   }
+}
+
+@keyframes call-to-action-one {
+   60% {
+      -webkit-transform: scale3d(0.8, 0.8, 1);
+      transform: scale3d(0.8, 0.8, 1);
+   }
+   85% {
+      -webkit-transform: scale3d(1.1, 1.1, 1);
+      transform: scale3d(1.1, 1.1, 1);
+   }
+   100% {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+   }
+}
+
+@-webkit-keyframes call-to-action-two {
+   to {
+      opacity: 0;
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+   }
+}
+
+@keyframes call-to-action-two {
+   to {
+      opacity: 0;
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+   }
+}
+
+#ctaButtonTwo {
+   display: inline-block;
+}
+
 #ctaButton {
    display: none;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 821px) {
    .navbar-list {
       position: static;
       top: 0;
@@ -492,6 +613,11 @@ a {
    #menuButton {
       display: none;
    }
+
+   #ctaButtonTwo {
+      display: none;
+   }
+
    #ctaButton {
       display: inline-block;
       margin-left: 2rem;
