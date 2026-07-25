@@ -40,6 +40,9 @@ document.addEventListener('DOMContentLoaded', function () {
    const icon = document.getElementById('lightDarkIcon');
    const menuButton = document.getElementById('menuButton');
    const navbarList = document.getElementById('navbarList');
+   const navLinks = document.querySelectorAll('.navbar-list-link');
+
+
 
 
    lightDarkButton.addEventListener('click', function () {
@@ -56,6 +59,13 @@ document.addEventListener('DOMContentLoaded', function () {
       this.classList.toggle('is-open');
       menuButton.classList.toggle('is-open');
 
+   });
+
+   navLinks.forEach(link => {
+      link.addEventListener('click', function () {
+         navLinks.forEach((item) => item.classList.remove('active'));
+         this.classList.add('active');
+      });
    });
 
 });
