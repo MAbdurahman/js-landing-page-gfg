@@ -17,18 +17,17 @@
     <script defer src='./js/main.js'></script>
     <title>Agency.AI</title>
 </head>
-<body>
+<body id='page-top'>
 <!-- preloader -->
-<section id="preloader" class="preloader">
+<div id="preloader" class="preloader">
     <img src='./assets/gif/preloader.gif' alt="2-gears" id="preloader-gif" class="preloader-gif"/>
-</section>
-<!-- header and navigation -->
-<header class='header'>
-    <section class='header-navbar utils-container'>
-        <div class='navbar-logo'>
-            <a class='navbar-logo-brand' href='#'>Agency.<span class='logo-brand'>AI</span></a>
-        </div>
-        <nav class='navbar-nav' id='navbar'>
+</div>
+<!-- navigation -->
+    <div class='navbar'>
+        <nav class='navbar-nav utils-container' id='navbar'>
+            <div class='navbar-logo'>
+                <a class='navbar-logo-brand' href='#home'>Agency.<span class='logo-brand-color'>AI</span></a>
+            </div>
             <ul class='navbar-list' id='navbarList'>
                 <li class='navbar-list-item'>
                     <a class='navbar-list-link active' href='#home'>home</a>
@@ -49,19 +48,33 @@
                     <a class='cta-button' href='#'>Start Now</a>
                 </li>
             </ul>
-        
+            <div class='navbar-buttons'>
+                <a class='cta-button' id='ctaButton' href='#'>Start Now</a>
+                <button class='menu-button' id='lightDarkButton' type='button'>
+                    <img alt='moon or sun' height='40'
+                         id='lightDarkIcon' src='./assets/img/moon.png' width='40'/>
+                </button>
+                <button class='menu-button' id='menuButton' type='button'>
+                    <span class='menu-button-bar'></span>
+                </button>
+            </div>
         </nav>
-        <div class='navbar-buttons'>
-            <a class='cta-button' id='ctaButton' href='#'>Start Now</a>
-            <button class='menu-button' id='lightDarkButton' type='button'>
-                <img alt='moon or sun' height='40'
-                     id='lightDarkIcon' src='./assets/img/moon.png' width='40'/>
-            </button>
-            <button class='menu-button' id='menuButton' type='button'>
-                <span class='menu-button-bar'></span>
-            </button>
+    </div>
+<!-- home section -->
+<section id='home' class='utils-container'>
+    <div class='home-section-container'>
+        <h1 class='header-title'>Discover our solutions<br><span class='brand-color'>for your brand.</span></h1>
+        <div class='header-content'>
+            <p class='header-paragraph'>
+                We help businesses grow by creating innovative digital products, memorable brand identities,
+                and user experiences that connect with their audiences
+            </p>
         </div>
-    </section>
-</header>
+        <div class='header-buttons'>
+            <a href='#' class='primary-button' role='button'>Learn More</a>
+            <a href='#' class='outline-button' role='button'>Watch Video</a>
+        </div>
+    </div>
+</section>
 </body>
 </html>
