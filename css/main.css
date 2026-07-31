@@ -494,11 +494,13 @@ a[class^='outline-button']:focus {
    gap: 2rem;
    padding: 2em;
    background-color: var(--color-neutral-100);
-   transition: transform 0.5s;
+   opacity: 0;
+   transition: transform 0.5s, opacity 0.125s;
 
 }
 
 .navbar-list.is-open {
+   opacity: 1;
    transform: translateY(100%);
 }
 
