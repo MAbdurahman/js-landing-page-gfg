@@ -728,6 +728,7 @@ a[class^='cta-button']:hover::before {
       gap: 1rem;
       padding: 0;
       background-color: transparent;
+      opacity: 1;
    }
 
    .navbar-list.is-open {
