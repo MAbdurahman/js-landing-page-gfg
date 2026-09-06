@@ -4,7 +4,7 @@
     <meta charset='UTF-8'>
     <meta content='width=device-width, initial-scale=1.0' name='viewport'/>
     <!-- favicon -->
-    <link rel="icon" href='favicon.ico' sizes='64x64'>
+    <link href='favicon.ico' rel='icon' sizes='64x64'>
     <!-- google fonts -->
     <link href='https://fonts.googleapis.com' rel='preconnect'>
     <link crossorigin href='https://fonts.gstatic.com' rel='preconnect'>
@@ -20,62 +20,184 @@
 </head>
 <body id='page-top'>
 <!-- preloader -->
-<div id="preloader" class="preloader">
-    <img src='./assets/gif/preloader.gif' alt="2-gears" id="preloader-gif" class="preloader-gif"/>
+<div class='preloader' id='preloader'>
+    <img alt='2-gears' class='preloader-gif' id='preloader-gif'
+         src='./assets/gif/preloader.gif'/>
 </div>
 <!-- navigation -->
-    <div class='navbar'>
-        <nav class='navbar-nav utils-container' id='navbar'>
-            <div class='navbar-logo'>
-                <a class='navbar-logo-brand' href='#home'>Agency.<span class='logo-brand-color'>AI</span></a>
-            </div>
-            <ul class='navbar-list' id='navbarList'>
-                <li class='navbar-list-item'>
-                    <a class='navbar-list-link active' href='#home'>home</a>
-                </li>
-                <li class='navbar-list-item'>
-                    <a class='navbar-list-link' href='#about'>about</a>
-                </li>
-                <li class='navbar-list-item'>
-                    <a class='navbar-list-link' href='#services'>services</a>
-                </li>
-                <li class='navbar-list-item'>
-                    <a class='navbar-list-link' href='#team'>team</a>
-                </li>
-                <li class='navbar-list-item'>
-                    <a class='navbar-list-link' href='#contact'>contact</a>
-                </li>
-                <li class='navbar-list-item' id='ctaButtonTwo'>
-                    <a class='cta-button' href='#'>Start Now</a>
-                </li>
-            </ul>
-            <div class='navbar-buttons'>
-                <a class='cta-button' id='ctaButton' href='#'>Start Now</a>
-                <button class='menu-button' id='lightDarkButton' type='button'>
-                    <img src='./assets/img/moon.png' alt='moon or sun' id='lightDarkIcon'
-                         height='40' width='40'/>
-                </button>
-                <button class='menu-button' id='menuButton' type='button'>
-                    <span class='menu-button-bar'></span>
-                </button>
-            </div>
-        </nav>
-    </div>
-<!-- home section -->
-<section id='home' class='utils-container'>
-    <div class='home-section-container'>
-        <h1 class='header-title'>Discover our solutions<br><span class='brand-color'>for your brand.</span></h1>
-        <div class='header-content'>
-            <p class='header-paragraph'>
-                We help businesses grow by creating innovative digital products, memorable brand identities,
-                and user experiences that connect with their audiences
-            </p>
+<div class='navbar'>
+    <nav class='navbar-nav utils-container' id='navbar'>
+        <div class='navbar-logo'>
+            <a class='navbar-logo-brand' href='#home'
+               id='navbar-logo-brand'>Agency.<span class='logo-brand-color'>AI</span></a>
         </div>
-        <div class='header-buttons'>
-            <a href='#' class='primary-button' role='button'>Learn More</a>
-            <a href='#' class='outline-button' role='button'>Watch Video</a>
+        <ul class='navbar-list' id='navbarList'>
+            <li class='navbar-list-item'>
+                <a class='navbar-list-link active' href='#home'
+                   id='navbar-home-link'>home</a>
+            </li>
+            <li class='navbar-list-item'>
+                <a class='navbar-list-link' href='#about' id='navbar-about-link'>about</a>
+            </li>
+            <li class='navbar-list-item'>
+                <a class='navbar-list-link' href='#services'>services</a>
+            </li>
+            <li class='navbar-list-item'>
+                <a class='navbar-list-link' href='#testimonial'>testimonials</a>
+            </li>
+            <li class='navbar-list-item'>
+                <a class='navbar-list-link' href='#contact'>contact</a>
+            </li>
+            <li class='navbar-list-item' id='ctaButtonTwo'>
+                <a class='cta-button' href='#services'>Start Now</a>
+            </li>
+        </ul>
+        <div class='navbar-buttons'>
+            <a class='cta-button' href='#' id='ctaButton'>Start Now</a>
+            <button class='menu-button' id='lightDarkButton' type='button'>
+                <img alt='moon or sun' height='40' id='lightDarkIcon'
+                     src='assets/img/theme/moon.png' width='40'/>
+            </button>
+            <button class='menu-button' id='menuButton' type='button'>
+                <span class='menu-button-bar'></span>
+            </button>
+        </div>
+    </nav>
+</div>
+<!-- home section -->
+<section class='section section-one' id='home'>
+    <div class='utils-container'>
+        <div class='home-section-container'>
+            <h1 class='header-title'>Discover our solutions<br><span
+                    class='brand-color'>for your brand.</span></h1>
+            <div class='header-content'>
+                <p class='header-paragraph'>
+                    We help businesses grow by creating innovative digital products,
+                    memorable brand identities,
+                    and user experiences that connect with their audiences
+                </p>
+            </div>
+            <div class='header-buttons'>
+                <a class='primary-button' href='#about' id='learn-more-link'
+                   role='button'>Learn More</a>
+                <a class='outline-button' href='#' role='button'>Watch Video</a>
+            </div>
         </div>
     </div>
 </section>
+<!-- about section -->
+<section class='section section-two' id='about'>
+    <div class='utils-container'>
+        <div class='about-section-container'>
+            <div class='about-section-title'>
+                <h2 class='about-title'>About<span class='brand-color'>Us</span></h2>
+                <p class='about-paragraph'>
+                    We combine creativity, strategy, and innovation to ensure your
+                    brand shines and achieves the prominence it deserves
+                </p>
+            </div>
+            <div class='about-section-content'>
+                <div class='about-section-left'>
+                    <img alt='Group meeting'
+                         class='about-section-image'
+                         src='./assets/img/about/group-meeting.jpg'>
+                </div>
+                <div class='about-section-right'>
+                    <p class='about-text'>At <span
+                            class='about-logo-brand'>Agency.</span><span
+                            class='about-brand-color'>AI</span>, we blend years of
+                        industry experience with
+                        forward-thinking
+                        innovation to craft tailored designs and development
+                        solutions. Our creative
+                        approach ensures every project stands out, whether it is
+                        building powerful
+                        digital products or developing scalable web experiences.
+                    </p>
+                    <p class='about-text'><span
+                            class='about-brand font-weight-700'>Our Mission</span> - Design and
+                        develop digital experiences that earn attention, build trust,
+                        and improve conversion rates.</p>
+                    <p class='about-text'><span class='about-brand font-weight-700'>Our Vision</span>
+                        - Create the kind of digital presence that feels effortless
+                        for users
+                        and powerful for businesses.</p>
+                    <p class='about-text'><span
+                            class='about-brand font-weight-700'>Our Philosophy</span> - Strategy
+                        should be felt in the details &ndash; every decision serves
+                        the user and supports the business goal.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class='section section-three' id='clients'>
+    <div class='utils-container'>
+        <div class='client-section-container'>
+            <div class='client-section-title'>
+                <h6 class='client-title'>Trusted by teams at leading businesses</h6>
+                <section class='about-section-button'>
+                    <button class='pause-button' type='button'>Pause</button>
+                </section>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- services section -->
+<section class='section section-four' id='services'>
+    <div class='utils-container'>
+        <div class='services-section-container'>
+            <div class='services-section-title'>
+                <h2 class='services-title'><span class='brand-color'>Our</span>Services
+                </h2>
+                <p class='services-paragraph'></p>
+            </div>
+            <div class='services-section-content'>
+                <div class='services-section-left'></div>
+                <div class='services-section-right'></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- testimonial section -->
+<section class='section section-five' id='testimonial'>
+    <div class='utils-container'>
+        <div class='testimonial-section-container'>
+            <div class='testimonial-section-title'>
+                <h2 class='testimonial-title'><span class='brand-color'>Our</span>Testimonials
+                </h2>
+                <p class='testimonial-paragraph'></p>
+            </div>
+            <div class='testimonial-section-content'>
+                <div class='testimonial-section-left'></div>
+                <div class='testimonial-section-right'></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- contact section -->
+<section class='section section-six' id='contact'>
+    <div class='utils-container'>
+        <div class='contact-section-container'>
+            <div class='contact-section-title'>
+                <h2 class='contact-title'><span class='brand-color'>Contact</span>Us</h2>
+                <p class='contact-paragraph'></p>
+            </div>
+            <div class='contact-section-content'>
+                <div class='contact-section-left'></div>
+                <div class='contact-section-right'></div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class='footer section-seven'>
+    <div class='utils-container'>
+        <div class='footer-section-container'>
+            <h3 class='footer-title'>footer section</h3>
+        </div>
+    </div>
+</footer>
 </body>
 </html>

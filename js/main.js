@@ -1,5 +1,3 @@
-
-
 'use strict';
 /*===============================================================
           preloader scripts
@@ -41,13 +39,18 @@ document.addEventListener('DOMContentLoaded', function () {
    const menuButton = document.getElementById('menuButton');
    const navbarList = document.getElementById('navbarList');
    const navLinks = document.querySelectorAll('.navbar-list-link');
+   const navbarLogo = document.getElementById('navbar-logo-brand');
+   const homeLink = document.getElementById('navbar-home-link');
+   const aboutLink = document.getElementById('navbar-about-link');
+   const learnMoreLink = document.getElementById('learn-more-link');
+   const menuToggleBreakPoint = 821;
 
-
-
+   console.log(window.innerWidth);
 
    lightDarkButton.addEventListener('click', function () {
-      icon.src = icon.src.includes('moon') ? './assets/img/sun.png' : './assets/img/moon.png';
+      icon.src = icon.src.includes('moon') ? './assets/img/theme/sun.png' : './assets/img/theme/moon.png';
    });
+
 
    menuButton.addEventListener('click', function () {
       this.classList.toggle('is-open');
@@ -67,5 +70,27 @@ document.addEventListener('DOMContentLoaded', function () {
          this.classList.add('active');
       });
    });
+
+   navbarLogo.addEventListener('click', function () {
+      navLinks.forEach((item) => item.classList.remove('active'));
+      homeLink.classList.add('active');
+
+      const isMobile = window.innerWidth <= menuToggleBreakPoint;
+
+      if (isMobile) {
+         navbarList.classList.toggle('is-open');
+         menuButton.classList.toggle('is-open');
+      } else {
+         // on desktop: don't toggle; ensure closed
+         navbarList.classList.remove('is-open');
+         menuButton.classList.remove('is-open');
+      }
+   });
+
+   learnMoreLink.addEventListener('click', function () {
+      navLinks.forEach((item) => item.classList.remove('active'));
+      aboutLink.classList.add('active');
+
+   })
 
 });

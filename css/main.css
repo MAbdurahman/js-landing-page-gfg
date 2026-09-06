@@ -65,21 +65,14 @@
    --color-primary-800: hsl(277, 77%, 45%);
    --color-primary-900: hsl(277, 77%, 35%);
    /* neutral colors */
-   --color-neutral-001: #fafafa;
    --color-neutral-000: hsl(277, 0%, 98%);
    --color-neutral-100: hsl(277, 0%, 88%);
-   --color-neutral-101: #e0e0e0;
    --color-neutral-200: hsl(277, 0%, 78%);
    --color-neutral-300: hsl(277, 0%, 68%);
    --color-neutral-400: hsl(277, 0%, 58%);
-   --color-neutral-402: #949494;
    --color-neutral-500: hsl(277, 0%, 48%);
-   --color-neutral-502: #7a7a7a;
    --color-neutral-600: hsl(277, 0%, 38%);
-   --color-neutral-602: #616161;
    --color-neutral-700: hsl(277, 0%, 28%);
-   --color-neutral-702: #474747;
-   --color-neutral-802: #2e2e2e;
    --color-neutral-800: hsl(277, 0%, 18%);
    --color-neutral-900: hsl(277, 0%, 10%);
    /* augmented colors */
@@ -147,15 +140,54 @@
    --radius-800: 55px;
    --radius-900: 50%;
 
-   /**************** breakpoints ****************/
-   --breakpoint-xxs: 20rem; /*320px */
-   --breakpoint-xs: 30rem; /*480px */
-   --breakpoint-sm: 40rem; /*640px */
-   --breakpoint-md: 48rem; /*768px */
-   --breakpoint-lg: 64rem; /*1024px;*/
-   --breakpoint-xl: 80rem; /*1280px;*/
-   --breakpoint-2xl: 96rem; /*1536px;*/
-   --breakpoint-3xl: 120rem; /*1920px;*/
+   /************************* border-radius *************************/
+   --br-border-radius-000: 1px;
+   --br-border-radius-100: 2px;
+   --br-border-radius-200: 3px;
+   --br-border-radius-300: 5px;
+   --br-border-radius-400: 8px;
+   --br-border-radius-500: 13px;
+   --br-border-radius-600: 21px;
+   --br-border-radius-700: 34px;
+   --br-border-radius-800: 55px;
+   --br-border-radius-900: 50%;
+
+
+   /************************* box shadows *************************/
+   /* box-shadow-right */
+   --bs-box-shadow-right-000: 8px 0px 8px -5px rgba(34, 40, 45, 0.15);
+   --bs-box-shadow-right-100: 8px 0px 8px -5px rgba(34, 40, 45, 0.25);
+   --bs-box-shadow-right-200: 8px 0px 8px -5px rgba(34, 40, 45, 0.35);
+   --bs-box-shadow-right-300: 8px 0px 8px -3px rgba(34, 40, 45, 0.15);
+   --bs-box-shadow-right-400: 8px 0px 8px -3px rgba(34, 40, 45, 0.25);
+   --bs-box-shadow-right-500: 8px 0px 8px -3px rgba(34, 40, 45, 0.35);
+   --bs-box-shadow-right-600: 8px 0px 8px 0px rgba(34, 40, 45, 0.15);
+   --bs-box-shadow-right-700: 8px 0px 8px 0px rgba(34, 40, 45, 0.25);
+   --bs-box-shadow-right-800: 8px 0px 8px 0px rgba(34, 40, 45, 0.35);
+   --bs-box-shadow-right-900: 8px 0px 8px 0px rgba(34, 40, 45, 0.55);
+   /* box-shadow-bottom */
+   --bs-box-shadow-bottom-000: 0px 8px 8px -5px rgba(34, 40, 45, 0.15);
+   --bs-box-shadow-bottom-100: 0px 8px 8px -5px rgba(34, 40, 45, 0.25);
+   --bs-box-shadow-bottom-200: 0px 8px 8px -5px rgba(34, 40, 45, 0.35);
+   --bs-box-shadow-bottom-300: 0px 8px 8px -3px rgba(34, 40, 45, 0.15);
+   --bs-box-shadow-bottom-400: 0px 8px 8px -3px rgba(34, 40, 45, 0.25);
+   --bs-box-shadow-bottom-500: 0px 8px 8px -3px rgba(34, 40, 45, 0.35);
+   --bs-box-shadow-bottom-600: 0px 8px 8px 0px rgba(34, 40, 45, 0.15);
+   --bs-box-shadow-bottom-700: 0px 8px 8px 0px rgba(34, 40, 45, 0.25);
+   --bs-box-shadow-bottom-800: 0px 8px 8px 0px rgba(34, 40, 45, 0.35);
+   --bs-box-shadow-bottom-900: 0px 8px 8px 0px rgba(34, 40, 45, 0.55);
+   /* box-shadow-bottom-right */
+   --bs-box-shadow-bottom-right-000: 3px 3px 8px -1px rgba(34, 40, 45, 0.15), 3px 3px 8px -1px rgba(34, 40, 45, 0.15);
+   --bs-box-shadow-bottom-right-100: 3px 3px 8px -1px rgba(34, 40, 45, 0.25), 3px 3px 8px -1px rgba(34, 40, 45, 0.25);
+   --bs-box-shadow-bottom-right-200: 3px 3px 8px -1px rgba(34, 40, 45, 0.35), 3px 3px 8px -1px rgba(34, 40, 45, 0.35);
+   --bs-box-shadow-bottom-right-300: 5px 3px 13px -1px rgba(34, 40, 45, 0.15), 5px 3px 13px -1px rgba(34, 40, 45, 0.15);
+   --bs-box-shadow-bottom-right-400: 5px 3px 13px -1px rgba(34, 40, 45, 0.25), 5px 3px 13px -1px rgba(34, 40, 45, 0.25);
+   --bs-box-shadow-bottom-right-500: 5px 3px 13px -1px rgba(34, 40, 45, 0.35), 5px 3px 13px -1px rgba(34, 40, 45, 0.35);
+   --bs-box-shadow-bottom-right-600: 5px 3px 21px -1px rgba(34, 40, 45, 0.15), 5px 3px 21px -1px rgba(34, 40, 45, 0.15);
+   --bs-box-shadow-bottom-right-700: 5px 3px 21px -1px rgba(34, 40, 45, 0.25), 5px 3px 21px -1px rgba(34, 40, 45, 0.25);
+   --bs-box-shadow-bottom-right-800: 5px 3px 21px -1px rgba(34, 40, 45, 0.35), 5px 3px 21px -1px rgba(34, 40, 45, 0.35);
+   --bs-box-shadow-bottom-right-900: 5px 3px 5px -1px rgba(34, 40, 45, 0.25), 5px 3px 5px -1px rgba(34, 40, 45, 0.25);
+
 
    /**************** letter spacing ****************/
    --letter-spacing-100: 1px;
@@ -169,10 +201,67 @@
    --letter-spacing-minus-400: -4px;
    --letter-spacing-minus-500: -5px;
 
-   /**************** toastify overrides ****************/
-   --toastify-color-error: hsl(0, 96%, 33%);
-   --toastify-font-family: var(--font-body);
-   --toastify-z-index: 10000;
+   /**************** margin spacing (soft 8px grid) ****************/
+   --m-0: 0px;
+   --m-1: 8px;
+   --m-2: 12px;
+   --m-3: 16px;
+   --m-4: 24px;
+   --m-5: 32px;
+   --m-6: 40px;
+   --m-7: 48px;
+   --m-8: 56px;
+   --m-9: 64px;
+   --m-10: 80px;
+
+   /**************** padding spacing (soft 8px grid) ****************/
+   --p-0: 0px;
+   --p-1: 8px;
+   --p-2: 12px;
+   --p-3: 16px;
+   --p-4: 24px;
+   --p-5: 32px;
+   --p-6: 40px;
+   --p-7: 48px;
+   --p-8: 56px;
+   --p-9: 64px;
+   --p-10: 80px;
+
+   /**************** spacing rem ****************/
+   --space-rem-000: 0.25rem; /* 4px */
+   --space-rem-100: 0.5rem; /* 8px */
+   --space-rem-200: 0.75rem; /* 12px */
+   --space-rem-300: 1rem; /* 16px */
+   --space-rem-400: 1.25rem; /* 20px */
+   --space-rem-500: 1.5rem; /* 24px */
+   --space-rem-600: 2rem; /* 32px */
+   --space-rem-700: 2.5rem; /* 40px */
+   --space-rem-800: 3rem; /* 48px */
+   --space-rem-900: 4rem; /* 64px */
+
+   /**************** spacing em ****************/
+   --space-em-000: 0.25rem; /* 4px */
+   --space-em-100: 0.5rem; /* 8px */
+   --space-em-200: 0.75rem; /* 12px */
+   --space-em-300: 1rem; /* 16px */
+   --space-em-400: 1.25rem; /* 20px */
+   --space-em-500: 1.5rem; /* 24px */
+   --space-em-600: 2rem; /* 32px */
+   --space-em-700: 2.5rem; /* 40px */
+   --space-em-800: 3rem; /* 48px */
+   --space-em-900: 4rem; /* 64px */
+
+
+   /**************** breakpoints ****************/
+   --breakpoint-xxs: 20rem; /*320px */
+   --breakpoint-xs: 30rem; /*480px */
+   --breakpoint-sm: 40rem; /*640px */
+   --breakpoint-md: 48rem; /*768px */
+   --breakpoint-lg: 64rem; /*1024px;*/
+   --breakpoint-xl: 80rem; /*1280px;*/
+   --breakpoint-2xl: 96rem; /*1536px;*/
+   --breakpoint-3xl: 120rem; /*1920px;*/
+
 }
 
 html {
@@ -187,7 +276,7 @@ html {
    font-size: 100%;
 }
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
    html {
       font-size: 83.333%;
    }
@@ -271,8 +360,16 @@ ul {
 
 a {
    text-decoration: none;
+   cursor: pointer;
 }
 
+button {
+   cursor: pointer;
+}
+
+img {
+   height: auto;
+}
 
 /*===============================================================
           utility classes
@@ -330,7 +427,6 @@ a {
    height: 100vh;
    z-index: 10000;
    overflow: hidden;
-   background: var(--color-augmented-000);
    display: -webkit-box;
    display: flex;
    -webkit-box-align: center;
@@ -339,6 +435,7 @@ a {
    justify-content: center;
    scrollbar-width: none;
    -ms-overflow-style: none;
+   background: var(--color-augmented-000);
 
 }
 
@@ -374,7 +471,7 @@ a {
 
 /************************* primary-button styles *************************/
 button[class^='primary-button'],
-a[class^='primary-button']{
+a[class^='primary-button'] {
    position: relative;
    min-width: 120px;
    height: 48px;
@@ -407,7 +504,7 @@ a[class^='primary-button']:focus {
 
 /************************ secondary-button styles ************************/
 button[class^='outline-button'],
-a[class^='outline-button']{
+a[class^='outline-button'] {
    position: relative;
    min-width: 120px;
    height: 48px;
@@ -435,6 +532,35 @@ a[class^='outline-button']:hover,
 a[class^='outline-button']:focus {
    background-color: var(--color-primary-900);
    color: var(--color-neutral-100);
+}
+
+button[class='pause-button'] {
+   position: relative;
+   min-width: 96px;
+   height: 24px;
+   z-index: 1;
+   overflow: hidden;
+   margin-top: 4px;
+   padding: 8px 16px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 0.8rem;
+   font-weight: 700;
+   text-align: center;
+   color: var(--color-neutral-200);
+   background-color: var(--color-primary-900);
+   border: 2px solid var(--color-primary-900);
+   border-radius: var(--br-border-radius-200);
+   cursor: pointer;
+   transition: background-color 0.3s, color 0.3s, opacity 0.3s;
+   -webkit-transition: background-color 0.3s, color 0.3s, opacity 0.3s;
+}
+
+button[class='pause-button']:hover,
+button[class='pause-button']:focus {
+   background-color: var(--color-neutral-100);
+   color: var(--color-primary-900);
 }
 
 /*===============================================================
@@ -798,21 +924,89 @@ a[class^='cta-button']:hover::before {
 }
 
 /*===============================================================
+          section styles
+==================================================================*/
+.section {
+   position: relative;
+   width: 100vw;
+   height: 100vh;
+}
+
+.section-one {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   background-color: var(--color-neutral-000);
+}
+
+.section-two {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   background-color: var(--color-neutral-200);
+}
+
+.section-three {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   background-color: var(--color-neutral-000);
+}
+
+.section-four {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   background-color: var(--color-neutral-000);
+}
+
+.section-five {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   background-color: var(--color-neutral-100);
+}
+
+.section-six {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   background-color: var(--color-neutral-100);
+}
+
+.section-footer {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   background-color: var(--color-neutral-700);
+   color: var(--color-neutral-100);
+}
+
+/*===============================================================
           home section
 ==================================================================*/
 .home-section-container {
    position: relative;
-   top: 80px;
    width: 100%;
-   height: 100%;
+   height: fit-content;
+   /*top: 0;
+   left: 0;*/
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
 }
+
 .header-title {
-   margin-top: 2em;
-   margin-bottom: 0.333em;
+   /*margin-top: 2em;
+   margin-bottom: 0.333em*/;
    font-weight: 900;
    line-height: 1;
    text-align: center;
@@ -849,3 +1043,266 @@ a[class^='cta-button']:hover::before {
    justify-content: space-evenly;
    gap: 1rem;
 }
+
+/*===============================================================
+          about section
+==================================================================*/
+
+.about-section-container {
+   position: relative;
+   width: 100%;
+   height: fit-content;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+
+
+}
+
+.about-section-title {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 3em;
+}
+
+.about-title {
+   text-align: center;
+   font-weight: 900;
+}
+
+.about-brand {
+   color: var(--color-primary-900);
+   font-weight: 600;
+}
+
+.font-weight-700 {
+   font-weight: 700;
+}
+
+.about-paragraph {
+   position: relative;
+   margin: 0 auto; /* keeps it centered */
+   max-width: 45ch; /* limits characters per line (roughly) */
+   text-align: center; /* optional: center the text itself */
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 1rem;
+   font-weight: 400;
+   line-height: 1.5;
+   color: var(--color-augmented-800);
+}
+
+.about-section-content {
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   gap: 16px;
+   margin-bottom: 2em;
+}
+
+.about-section-left {
+   flex: 1 1 100%;
+}
+
+.about-section-image {
+   /*position: relative;
+   left: -2%;
+   padding-top: var(--p-4);
+   max-width: 400px;
+   margin: 0 auto;*/
+   width: 98%;
+   height: 98%;
+   object-fit: contain;
+   border-radius: var(--radius-500);
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.about-section-right {
+   flex: 1 1 100%;
+}
+
+.about-logo-brand {
+   font-size: 1rem;
+   font-weight: 900;
+   color: var(--color-neutral-700);
+}
+
+.about-brand-color {
+   color: var(--color-primary-900);
+   font-weight: 900;
+}
+
+.about-text {
+   position: relative;
+   /*margin: 0 auto;*/ /* keeps it centered */
+   max-width: 50ch; /* limits characters per line (roughly) */
+   text-align: left; /* optional: center the text itself */
+   /*display: flex;*/
+   /*align-items: center;
+   justify-content: center;*/
+
+   min-width: 100%;
+   font-size: 1rem;
+   font-weight: 400;
+   line-height: 1.5;
+   /*hyphens: auto;*/
+   color: var(--color-augmented-800);
+}
+
+.about-text:not(:last-child) {
+   margin-bottom: 1em;
+}
+
+.about-section-companies {
+}
+
+.about-section-button {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-top: 1em;
+}
+
+@media screen and (min-width: 768px) {
+   .about-section-content {
+      flex-direction: row;
+   }
+
+   .about-section-left,
+   .about-section-right {
+      flex: 0 0 calc(50% - 8px);
+   }
+}
+
+
+/*===============================================================
+          client section
+==================================================================*/
+.client-section-container {
+   position: relative;
+   width: 100%;
+   height: fit-content;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+
+
+}
+
+.client-section-title {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 3em;
+}
+
+.client-title {
+   text-align: center;
+   font-weight: 900;
+}
+
+
+/*===============================================================
+          services section
+==================================================================*/
+.services-section-container {
+   position: relative;
+   width: 100%;
+   height: fit-content;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+
+
+}
+
+.services-section-title {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 3em;
+}
+
+.services-title {
+   text-align: center;
+   font-weight: 900;
+}
+
+
+/*===============================================================
+          testimonial section
+==================================================================*/
+.testimonial-section-container {
+   position: relative;
+   width: 100%;
+   height: fit-content;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+
+
+}
+
+.testimonial-section-title {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 3em;
+}
+
+.testimonial-title {
+   text-align: center;
+   font-weight: 900;
+}
+
+
+/*===============================================================
+          contact section
+==================================================================*/
+.contact-section-container {
+   position: relative;
+   width: 100%;
+   height: fit-content;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+
+}
+
+.contact-section-title {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 3em;
+}
+
+.contact-title {
+   text-align: center;
+   font-weight: 900;
+}
+
+
+/*===============================================================
+          footer section
+==================================================================*/
+
+/*===============================================================
+           section
+==================================================================*/
+
+
+/*===============================================================
+           section
+==================================================================*/
