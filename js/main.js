@@ -43,13 +43,35 @@ document.addEventListener('DOMContentLoaded', function () {
    const homeLink = document.getElementById('navbar-home-link');
    const aboutLink = document.getElementById('navbar-about-link');
    const learnMoreLink = document.getElementById('learn-more-link');
+   const ctaButton = document.getElementById('ctaButton');
+   const ctaButtonTwo = document.getElementById('ctaButtonTwo');
+   const servicesLink = document.getElementById('navbar-services-link');
    const menuToggleBreakPoint = 821;
+
+   const pauseButton = document.getElementById('pause-button');
+   const marqueeSliderLeft = document.getElementById('marquee-slider-left');
+   const marqueeSliderRight = document.getElementById('marquee-slider-right');
+
+   let isPaused = false;
+
+
 
    console.log(window.innerWidth);
 
    lightDarkButton.addEventListener('click', function () {
       icon.src = icon.src.includes('moon') ? './assets/img/theme/sun.png' : './assets/img/theme/moon.png';
    });
+
+   ctaButton.addEventListener('click', function () {
+      navLinks.forEach((item) => item.classList.remove('active'));
+      servicesLink.classList.add('active');
+   });
+
+   ctaButtonTwo.addEventListener('click', function () {
+      navLinks.forEach((item) => item.classList.remove('active'));
+      servicesLink.classList.add('active');
+   });
+
 
 
    menuButton.addEventListener('click', function () {
@@ -92,5 +114,22 @@ document.addEventListener('DOMContentLoaded', function () {
       aboutLink.classList.add('active');
 
    })
+   /*===============================================================
+             logo section
+   ==================================================================*/
+      function applyMarqueeSliderState() {
+         marqueeSliderLeft.classList.toggle('is-paused', isPaused);
+         marqueeSliderRight.classList.toggle('is-paused', isPaused);
+         pauseButton.textContent = isPaused ? 'Resume' : 'Pause';
+         pauseButton.setAttribute('aria-label', String(isPaused));
+      }
+
+      pauseButton.addEventListener('click', function () {
+         isPaused = !isPaused;
+         applyMarqueeSliderState();
+      });
+
+      // by default, marquee slider is not paused
+      applyMarqueeSliderState();
 
 });

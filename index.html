@@ -40,7 +40,7 @@
                 <a class='navbar-list-link' href='#about' id='navbar-about-link'>about</a>
             </li>
             <li class='navbar-list-item'>
-                <a class='navbar-list-link' href='#services'>services</a>
+                <a class='navbar-list-link' id='navbar-services-link' href='#services'>services</a>
             </li>
             <li class='navbar-list-item'>
                 <a class='navbar-list-link' href='#testimonial'>testimonials</a>
@@ -53,7 +53,7 @@
             </li>
         </ul>
         <div class='navbar-buttons'>
-            <a class='cta-button' href='#' id='ctaButton'>Start Now</a>
+            <a class='cta-button' href='#services' id='ctaButton'>Start Now</a>
             <button class='menu-button' id='lightDarkButton' type='button'>
                 <img alt='moon or sun' height='40' id='lightDarkIcon'
                      src='assets/img/theme/moon.png' width='40'/>
@@ -131,14 +131,65 @@
         </div>
     </div>
 </section>
-<section class='section section-three' id='clients'>
+<section class='section-half section-three' id='logos'>
     <div class='utils-container'>
-        <div class='client-section-container'>
-            <div class='client-section-title'>
-                <h6 class='client-title'>Trusted by teams at leading businesses</h6>
-                <section class='about-section-button'>
-                    <button class='pause-button' type='button'>Pause</button>
+        <div class='logo-section-container'>
+            <div class='logo-section-title'>
+                <h6 class='logo-title'>Trusted by teams at leading businesses</h6>
+                <section class='logo-section-button'>
+                    <button id='pause-button' class='pause-button' aria-pressed='false' type='button'>Pause</button>
                 </section>
+            </div>
+            <div class='marquee-sliders'>
+                <!-- moves leftward -->
+                <section id='marquee-slider-left' class='marquee-slider' aria-label='Marquee Slider Left'>
+                    <div id='marquee-track-left' class='marquee-track left'>
+                        <!-- duplicate logos to create a seamless loop -->
+                        <img alt='Logo 1' class='logo' src='./assets/img/logos/logo-01.png'>
+                        <img alt='Logo 2' class='logo' src='./assets/img/logos/logo-02.png'>
+                        <img alt='Logo 3' class='logo' src='./assets/img/logos/logo-03.png'>
+                        <img alt='Logo 4' class='logo' src='./assets/img/logos/logo-04.png'>
+                        <img alt='Logo 5' class='logo' src='./assets/img/logos/logo-05.png'>
+                        <img alt='Logo 6' class='logo' src='./assets/img/logos/logo-06.png'>
+                        <img alt='Logo 7' class='logo' src='./assets/img/logos/logo-07.png'>
+                        <img alt='Logo 8' class='logo' src='./assets/img/logos/logo-08.png'>
+                        
+                        <!-- duplicates -->
+                        <img alt='Logo 1 duplicate' class='logo' src='./assets/img/logos/logo-01.png'>
+                        <img alt='Logo 2 duplicate' class='logo' src='./assets/img/logos/logo-02.png'>
+                        <img alt='Logo 3 duplicate' class='logo' src='./assets/img/logos/logo-03.png'>
+                        <img alt='Logo 4 duplicate' class='logo' src='./assets/img/logos/logo-04.png'>
+                        <img alt='Logo 5 duplicate' class='logo' src='./assets/img/logos/logo-05.png'>
+                        <img alt='Logo 6 duplicate' class='logo' src='./assets/img/logos/logo-06.png'>
+                        <img alt='Logo 7 duplicate' class='logo' src='./assets/img/logos/logo-07.png'>
+                        <img alt='Logo 8 duplicate' class='logo' src='./assets/img/logos/logo-08.png'>
+                    </div>
+                </section>
+                <!-- moves rightward -->
+                <section id='marquee-slider-right' class='marquee-slider' aria-label='Marquee Slider Right'>
+                    <div id='marquee-track-right' class='marquee-track right'>
+                        <!-- duplicate logos to create a seamless loop -->
+                        <img alt='logo 09' class='logo' src='./assets/img/logos/logo-09.png'>
+                        <img alt='logo 10' class='logo' src='./assets/img/logos/logo-10.png'>
+                        <img alt='logo 11' class='logo' src='./assets/img/logos/logo-11.png'>
+                        <img alt='logo 12' class='logo' src='./assets/img/logos/logo-12.png'>
+                        <img alt='logo 13' class='logo' src='./assets/img/logos/logo-13.png'>
+                        <img alt='logo 14' class='logo' src='./assets/img/logos/logo-14.png'>
+                        <img alt='logo 15' class='logo' src='./assets/img/logos/logo-15.png'>
+                        <img alt='logo 16' class='logo' src='./assets/img/logos/logo-16.png'>
+                        
+                        <!-- duplicates -->
+                        <img alt='logo 09 duplicate' class='logo' src='./assets/img/logos/logo-09.png'>
+                        <img alt='logo 10 duplicate' class='logo' src='./assets/img/logos/logo-10.png'>
+                        <img alt='logo 11 duplicate' class='logo' src='./assets/img/logos/logo-11.png'>
+                        <img alt='logo 12 duplicate' class='logo' src='./assets/img/logos/logo-12.png'>
+                        <img alt='logo 13 duplicate' class='logo' src='./assets/img/logos/logo-13.png'>
+                        <img alt='logo 14 duplicate' class='logo' src='./assets/img/logos/logo-14.png'>
+                        <img alt='logo 15 duplicate' class='logo' src='./assets/img/logos/logo-15.png'>
+                        <img alt='logo 16 duplicate' class='logo' src='./assets/img/logos/logo-16.png'>
+                    </div>
+                </section>
+            
             </div>
         </div>
     </div>
@@ -148,8 +199,8 @@
     <div class='utils-container'>
         <div class='services-section-container'>
             <div class='services-section-title'>
-                <h2 class='services-title'><span class='brand-color'>Our</span>Services
-                </h2>
+                <h2 class='services-title'>Our<span class='brand-color'>Services
+                </span></h2>
                 <p class='services-paragraph'></p>
             </div>
             <div class='services-section-content'>
@@ -182,7 +233,7 @@
     <div class='utils-container'>
         <div class='contact-section-container'>
             <div class='contact-section-title'>
-                <h2 class='contact-title'><span class='brand-color'>Contact</span>Us</h2>
+                <h2 class='contact-title'>Contact<span class='brand-color'>Us</span></h2>
                 <p class='contact-paragraph'></p>
             </div>
             <div class='contact-section-content'>
@@ -192,7 +243,7 @@
         </div>
     </div>
 </section>
-<footer class='footer section-seven'>
+<footer class='footer section-footer'>
     <div class='utils-container'>
         <div class='footer-section-container'>
             <h3 class='footer-title'>footer section</h3>
