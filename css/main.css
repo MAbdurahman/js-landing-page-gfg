@@ -64,6 +64,7 @@
    --color-primary-700: hsl(277, 77%, 50%);
    --color-primary-800: hsl(277, 77%, 45%);
    --color-primary-900: hsl(277, 77%, 35%);
+   --color-primary-900a: #69159e;
    /* neutral colors */
    --color-neutral-000: hsl(277, 0%, 98%);
    --color-neutral-100: hsl(277, 0%, 88%);
@@ -75,6 +76,7 @@
    --color-neutral-700: hsl(277, 0%, 28%);
    --color-neutral-800: hsl(277, 0%, 18%);
    --color-neutral-900: hsl(277, 0%, 10%);
+   --color-neutral-900a: #1a1a1a;
    /* augmented colors */
    --color-augmented-000: hsl(277, 12%, 95%);
    --color-augmented-100: hsl(277, 12%, 85%);
