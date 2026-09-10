@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
    const ctaButton = document.getElementById('ctaButton');
    const ctaButtonTwo = document.getElementById('ctaButtonTwo');
    const servicesLink = document.getElementById('navbar-services-link');
+   const aboutButtonLink = document.getElementById('about-button');
    const menuToggleBreakPoint = 821;
 
    const pauseButton = document.getElementById('pause-button');
@@ -68,6 +69,11 @@ document.addEventListener('DOMContentLoaded', function () {
    });
 
    ctaButtonTwo.addEventListener('click', function () {
+      navLinks.forEach((item) => item.classList.remove('active'));
+      servicesLink.classList.add('active');
+   });
+
+   aboutButtonLink.addEventListener('click', function () {
       navLinks.forEach((item) => item.classList.remove('active'));
       servicesLink.classList.add('active');
    });
