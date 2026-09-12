@@ -55,8 +55,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
    let isPaused = false;
 
-
-
    console.log(window.innerWidth);
 
    lightDarkButton.addEventListener('click', function () {
@@ -77,7 +75,6 @@ document.addEventListener('DOMContentLoaded', function () {
       navLinks.forEach((item) => item.classList.remove('active'));
       servicesLink.classList.add('active');
    });
-
 
 
    menuButton.addEventListener('click', function () {
@@ -138,4 +135,20 @@ document.addEventListener('DOMContentLoaded', function () {
       // by default, marquee slider is not paused
       applyMarqueeSliderState();
 
+   /*===============================================================
+          elements with reveal class
+   ==================================================================*/
+
+   const reveals = document.querySelectorAll('.reveal');
+   const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+         if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+         }
+      });
+   }, {
+      threshold: 0.15
+   });
+
+   reveals.forEach((el) => revealObserver.observe(el));
 });
