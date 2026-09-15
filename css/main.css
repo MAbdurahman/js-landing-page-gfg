@@ -663,7 +663,6 @@ button[aria-pressed='true'] {
 
 }
 
-
 button[class='nav-theme-button'] {
    width: 40px;
    height: 40px;
@@ -945,12 +944,6 @@ a[class^='cta-button']:hover::before {
 
 }
 
-/*.section-half {
-   position: relative;
-   width: 100vw;
-   height: 75vh;
-}*/
-
 .section-one {
    display: flex;
    flex-direction: column;
@@ -975,7 +968,7 @@ a[class^='cta-button']:hover::before {
    flex-direction: column;
    align-items: center;
    justify-content: center;
-   padding: 120px 0;
+   padding: 120px 0 100px;
    background-color: var(--color-neutral-000);
 }
 
@@ -986,7 +979,7 @@ a[class^='cta-button']:hover::before {
    justify-content: center;
    /*padding: 25rem 15rem;*/
    padding: 120px 0;
-   background-color: var(--color-neutral-300);
+   background-color: var(--color-neutral-200);
 }
 
 .section-five {

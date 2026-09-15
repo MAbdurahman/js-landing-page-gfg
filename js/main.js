@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function () {
    })
 
    /*===============================================================
-             logo section
+             logo-marquee section
    ==================================================================*/
    function applyMarqueeSliderState() {
       marqueeSliderLeft.classList.toggle('is-paused', isPaused);
