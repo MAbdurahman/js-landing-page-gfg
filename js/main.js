@@ -117,23 +117,24 @@ document.addEventListener('DOMContentLoaded', function () {
       aboutLink.classList.add('active');
 
    })
+
    /*===============================================================
              logo section
    ==================================================================*/
-      function applyMarqueeSliderState() {
-         marqueeSliderLeft.classList.toggle('is-paused', isPaused);
-         marqueeSliderRight.classList.toggle('is-paused', isPaused);
-         pauseButton.textContent = isPaused ? 'Resume' : 'Pause';
-         pauseButton.setAttribute('aria-label', String(isPaused));
-      }
+   function applyMarqueeSliderState() {
+      marqueeSliderLeft.classList.toggle('is-paused', isPaused);
+      marqueeSliderRight.classList.toggle('is-paused', isPaused);
+      pauseButton.textContent = isPaused ? 'Resume' : 'Pause';
+      pauseButton.setAttribute('aria-label', String(isPaused));
+   }
 
-      pauseButton.addEventListener('click', function () {
-         isPaused = !isPaused;
-         applyMarqueeSliderState();
-      });
-
-      // by default, marquee slider is not paused
+   pauseButton.addEventListener('click', function () {
+      isPaused = !isPaused;
       applyMarqueeSliderState();
+   });
+
+   // by default, marquee slider is not paused
+   applyMarqueeSliderState();
 
    /*===============================================================
           elements with reveal class
@@ -151,4 +152,23 @@ document.addEventListener('DOMContentLoaded', function () {
    });
 
    reveals.forEach((el) => revealObserver.observe(el));
+
+   /*===============================================================
+             faq accordion script
+    ==================================================================*/
+
+   document.querySelectorAll('.faq-question').forEach((button) => {
+      button.addEventListener('click', () => {
+         const item = button.parentElement;
+         item.classList.toggle('active');
+      });
+   });
+
+
+   /*===============================================================
+             testimonial scripts
+    ==================================================================*/
+
+
+
 });
