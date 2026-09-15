@@ -577,8 +577,8 @@ button[aria-pressed='true'] {
    width: 100%;
    z-index: 999;
    background-color: var(--color-neutral-100);
-   border-bottom: 2px solid hsla(277 0% 28% / 0.08);
-   box-shadow: 0 4px 6px -4px hsla(277 0% 10% / 0.2);
+   border-bottom: 2px solid hsla(277 0% 28% / 0.3);
+   box-shadow: 0 4px 6px -4px hsla(277 0% 10% / 0.5);
 }
 
 .navbar-nav {
@@ -624,7 +624,7 @@ button[aria-pressed='true'] {
    gap: 2rem;
    padding: 2em;
    background-color: var(--color-neutral-100);
-   opacity: 0;
+   /*border-top: 2px solid var(--color-neutral-600);*/
    transition: transform 0.5s, opacity 0.125s;
 
 }
@@ -660,7 +660,15 @@ button[aria-pressed='true'] {
    flex-direction: row;
    justify-content: center;
    align-items: center;
-   gap: -1rem;
+
+}
+
+
+button[class='nav-theme-button'] {
+   width: 40px;
+   height: 40px;
+   background-color: transparent;
+   border: none;
 }
 
 /************************* menu-button styles *************************/
