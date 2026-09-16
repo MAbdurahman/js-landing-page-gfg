@@ -1238,7 +1238,7 @@ a[class^='cta-button']:hover::before {
 .sub-section-logo-paragraph {
    position: relative;
    margin: 0 auto 0.5em; /* keeps it centered */
-   max-width: 50ch; /* limits characters per line (roughly) */
+   max-width: 55ch; /* limits characters per line (roughly) */
    text-align: center; /* optional: center the text itself */
    display: flex;
    align-items: center;
@@ -1919,7 +1919,7 @@ a[class^='cta-button']:hover::before {
 .contact-paragraph {
    position: relative;
    margin: 0 auto 0.5em; /* keeps it centered */
-   max-width: 55ch; /* limits characters per line (roughly) */
+   max-width: 40ch; /* limits characters per line (roughly) */
    text-align: center; /* optional: center the text itself */
    display: flex;
    align-items: center;
