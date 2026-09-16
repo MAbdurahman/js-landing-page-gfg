@@ -1025,6 +1025,7 @@ a[class^='cta-button']:hover::before {
 .header-title {
    /*margin-top: 2em;
    margin-bottom: 0.333em*/;
+   margin-bottom: 8px;
    font-weight: 900;
    line-height: 1;
    text-align: center;
