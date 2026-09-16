@@ -1,25 +1,22 @@
 # js-landing-page-gfg
-<p>A modern responsive HTML, CSS, and JavaScript Landing Page with light/dark mode.</p>
+<p>A modern, responsive web development landing page built with HTML5, CSS3, and vanilla JavaScript.</p>
 
 ## Features
-- Responsive design for various screen sizes
-- Light and dark mode toggle
-- Smooth scrolling navigation
-- Modern UI components and animations
-- Easy to customize and extend
-- Customizable color themes
-- Customized animation
-- Customized toast notifications
-- CSS variables for easy theming
-- Using CSS Grid and Flexbox for layout
-- BEM methodology for naming conventions
-- SEO-friendly structure and meta tags
-- Cross-browser compatibility
-- Optimized for performance and fast loading times
-- Built with HTML5, CSS3, and vanilla JavaScript
-- Includes a contact form with validation
-- Includes a newsletter subscription form
-- Includes a testimonial section
+- [x] Responsive design for various screen sizes
+- [x] Light and dark mode toggle
+- [x] Smooth scrolling navigation
+- [x] Modern UI components and animations
+- [x] Easy to customize and extend
+- [x] Customized animation
+- [x] Customized testimonial draggable slider
+- [x] contact form with customized validation
+- [x] Customized toast notifications
+- [x] CSS variables for easy theming
+- [x] Using CSS Grid and Flexbox for layout
+- [x] BEM methodology for naming conventions
+- [x] SEO-friendly structure and meta tags
+- [x] Optimized for performance and fast loading times
+- [x] Built with HTML5, CSS3, and vanilla JavaScript
 
 ## To use
 <p>Clone or download the repository</p>
@@ -29,3 +26,5 @@ https://github.com/MAbdurahman/js-landing-page-gfg.git
 
 ```
 <p>Then, in the browser open the index.html file</p>
+
+### [Live preview](https://js-landing-page-gfg.vercel.app/)
