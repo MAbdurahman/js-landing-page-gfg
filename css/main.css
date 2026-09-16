@@ -117,18 +117,18 @@
    --color-semantic-alert-100: hsl(0, 96%, 48%);
 
    /**************** timing functions ****************/
-   --ease-basic-01: cubic-bezier(0.26, 0.1, 0.27, 1.55);
-   --ease-basic-02: cubic-bezier(0.17, 0.67, 0.83, 0.67);
-   --ease: cubic-bezier(0.19, 0.08, 0.46, 0.99);
-   --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
-   --ease-in: cubic-bezier(0.33, 0.02, 0.84, 0.75);
-   --ease-out: cubic-bezier(0.05, 0.21, 0.66, 0.98);
-   --ease-in-out: cubic-bezier(0.38, 0, 0.57, 0.99);
-   --ease-linear: cubic-bezier(0.19, 0.08, 0.84, 0.75);
-   --ease-smooth: cubic-bezier(0.1, 0.7, 0.6, 0.9);
-   --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
-   --ease-snappy-01: cubic-bezier(0.5, 0, 0.4, 0.98);
-   --ease-snappy-02: cubic-bezier(.17, .67, .83, .67);
+   --tf-ease-basic-01: cubic-bezier(0.26, 0.1, 0.27, 1.55);
+   --tf-ease-basic-02: cubic-bezier(0.17, 0.67, 0.83, 0.67);
+   --tf-ease: cubic-bezier(0.19, 0.08, 0.46, 0.99);
+   --tf-ease-fluid: cubic-bezier(0.3, 0, 0, 1);
+   --tf-ease-in: cubic-bezier(0.33, 0.02, 0.84, 0.75);
+   --tf-ease-out: cubic-bezier(0.05, 0.21, 0.66, 0.98);
+   --tf-ease-in-out: cubic-bezier(0.38, 0, 0.57, 0.99);
+   --tf-ease-linear: cubic-bezier(0.19, 0.08, 0.84, 0.75);
+   --tf-ease-smooth: cubic-bezier(0.1, 0.7, 0.6, 0.9);
+   --tf-ease-snappy: cubic-bezier(0.2, 0, 0, 1);
+   --tf-ease-snappy-01: cubic-bezier(0.5, 0, 0.4, 0.98);
+   --tf-ease-snappy-02: cubic-bezier(.17, .67, .83, .67);
 
    /**************** radius ****************/
    --radius-000: 1px;
@@ -466,7 +466,6 @@ img {
       opacity: 1;
    }
 }
-
 
 /*===============================================================
           buttons styles
@@ -941,7 +940,6 @@ a[class^='cta-button']:hover::before {
    position: relative;
    width: 100vw;
    min-height: 100vh;
-
 }
 
 .section-one {
@@ -958,7 +956,6 @@ a[class^='cta-button']:hover::before {
    flex-direction: column;
    align-items: center;
    justify-content: center;
-   /*padding: 8rem 4rem;*/
    padding: 120px 0;
    background-color: var(--color-neutral-100);
 }
@@ -971,15 +968,13 @@ a[class^='cta-button']:hover::before {
    padding: 120px 0 100px;
    background-color: var(--color-neutral-000);
 }
-
 .section-four {
    display: flex;
    flex-direction: column;
    align-items: center;
    justify-content: center;
-   /*padding: 25rem 15rem;*/
    padding: 120px 0;
-   background-color: var(--color-neutral-200);
+   background-color: var(--color-neutral-300);
 }
 
 .section-five {
@@ -987,7 +982,7 @@ a[class^='cta-button']:hover::before {
    flex-direction: column;
    align-items: center;
    justify-content: center;
-   background-color: var(--color-neutral-200);
+   background-color: var(--color-neutral-100);
 }
 
 .section-six {
@@ -1456,8 +1451,6 @@ a[class^='cta-button']:hover::before {
    line-height: 1.7;
 }
 
-
-
 /*===============================================================
           our process section
 ==================================================================*/
@@ -1584,8 +1577,6 @@ a[class^='cta-button']:hover::before {
    border-color: var(--color-primary-900);
 }
 
-
-
 /*===============================================================
           faq section
 ==================================================================*/
@@ -1635,10 +1626,6 @@ a[class^='cta-button']:hover::before {
    line-height: 1.5;
    color: var(--color-augmented-800);
 }
-
-/*.faq-container {
-   max-width: 900px;
-}*/
 
 .faq-list {
    display: grid;
@@ -1698,8 +1685,6 @@ a[class^='cta-button']:hover::before {
    line-height: 1.75;
 }
 
-
-
 .faq-item.active .faq-answer {
    max-height: 240px;
 }
@@ -1715,15 +1700,8 @@ a[class^='cta-button']:hover::before {
 /*===============================================================
           testimonial section
 ==================================================================*/
-.testimonial-section-container {
-   position: relative;
-   width: 100%;
-   height: fit-content;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-
+.testimonial-section {
+   padding: 80px 20px;
 }
 
 .testimonial-section-title {
@@ -1734,6 +1712,10 @@ a[class^='cta-button']:hover::before {
    margin-bottom: 3em;
 }
 
+.brand-color {
+   color: var(--color-primary-900);
+}
+
 .testimonial-title {
    text-align: center;
    font-weight: 900;
@@ -1742,19 +1724,171 @@ a[class^='cta-button']:hover::before {
 .testimonial-paragraph {
    position: relative;
    margin: 0 auto 0.5em; /* keeps it centered */
-   max-width: 55ch; /* limits characters per line (roughly) */
+   max-width: 45ch; /* limits characters per line (roughly) */
    text-align: center; /* optional: center the text itself */
    display: flex;
    align-items: center;
    justify-content: center;
    font-size: 1rem;
-   font-weight: 400;
+   font-weight: 500;
    line-height: 1.5;
-   color: var(--color-augmented-800);
+   color: var(--color-neutral-900);
 }
 
+.testimonial-slider {
+   position: relative;
+   display: flex;
+   align-items: center;
+   gap: 14px;
+   cursor: grab;
+}
 
+.testimonial-carousel {
+   display: grid;
+   grid-auto-flow: column;
+   grid-auto-columns: calc((100% - (16px * 2)) / 3);
+   gap: 16px;
+   overflow-x: auto;
+   scroll-snap-type: x mandatory;
+   scroll-behavior: smooth;
+   width: 100%;
+   padding: 6px 2px 18px;
+   cursor: grab;
+}
 
+.testimonial-carousel::-webkit-scrollbar {
+   display: none;
+}
+
+.testimonial-carousel {
+   scrollbar-width: none;
+   -ms-overflow-style: none;
+}
+
+.testimonial-carousel.is-dragging {
+   cursor: grabbing;
+   scroll-behavior: auto;
+   scroll-snap-type: none;
+}
+
+.testimonial-card {
+   background-color: var(--color-neutral-100);
+   border: 2px solid var(--color-primary-900);
+   border-radius: var(--br-border-radius-400);
+   box-shadow: var(--bs-box-shadow-bottom-right-100);
+   padding: 24px;
+   scroll-snap-align: start;
+   user-select: none;
+   cursor: grabbing;
+}
+
+.testimonial-carousel:hover {
+   cursor: grab;
+}
+
+.card-top {
+   display: flex;
+   align-items: center;
+   gap: 14px;
+   margin-bottom: 16px;
+}
+
+.avatar {
+   width: 72px;
+   height: 72px;
+   border-radius: 50%;
+   object-fit: cover;
+   border: 3px solid var(--color-primary-900);
+   flex-shrink: 0;
+}
+
+.card-top h3 {
+   font-size: 1.05rem;
+   margin-bottom: 4px;
+}
+
+.card-top span {
+   color: var(--color-neutral-900);
+   font-size: 0.92rem;
+   font-weight: var(--font-weight-semibold);
+}
+
+.stars {
+   font-size: 1.2rem;
+   color: var(--color-primary-900);
+   letter-spacing: 2px;
+   margin-bottom: 14px;
+}
+
+.testimonial-card p {
+   color: var(--color-neutral-900);
+   line-height: 1.75;
+   font-size: 0.96rem;
+   font-weight: 500;
+   text-align: left;
+   hyphens: auto;
+}
+
+.slider-btn {
+   width: 48px;
+   height: 48px;
+   border: 1px solid var(--color-primary-900);
+   border-radius: 50%;
+   background: var(--color-primary-900);
+   color: var(--color-neutral-100);
+   cursor: pointer;
+   flex-shrink: 0;
+   font-size: 1.15rem;
+   transition: all 0.25s var(--tf-ease);
+}
+
+.slider-btn:hover {
+   background: var(--color-primary-700);
+   transform: translateY(-4px);
+}
+
+.slider-btn:active {
+   transform: translateY(0);
+}
+
+@media screen and (max-width: 900px) {
+   .testimonial-carousel {
+      grid-auto-columns: calc((100% - 16px) / 2);
+   }
+
+   .section-header h2 {
+      font-size: 1.9rem;
+   }
+}
+
+@media screen and (max-width: 600px) {
+   .testimonial-slider {
+      gap: 10px;
+   }
+
+   .testimonial-carousel {
+      grid-auto-columns: 100%;
+   }
+
+   .slider-btn {
+      width: 42px;
+      height: 42px;
+      font-size: 1rem;
+   }
+
+   .section-header h2 {
+      font-size: 1.6rem;
+   }
+
+   .testimonial-card {
+      padding: 20px;
+   }
+
+   .avatar {
+      width: 64px;
+      height: 64px;
+   }
+}
 
 /*===============================================================
           contact section
