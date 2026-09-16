@@ -165,12 +165,13 @@ document.addEventListener('DOMContentLoaded', function () {
    });
 
 
-   /*===============================================================
-             testimonial scripts
-    ==================================================================*/
+
 
 });
 
+/*===============================================================
+             testimonial-slider scripts
+==================================================================*/
 document.addEventListener('DOMContentLoaded', () => {
    console.log('DOMContentLoaded and ready for use!');
 
@@ -258,8 +259,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
    function startAutoplay() {
       stopAutoplay();
-
-      /*       if (window.innerWidth < 768) return; */
 
       autoplayId = setInterval(() => {
          if (!isDragging) {
