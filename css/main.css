@@ -982,6 +982,7 @@ a[class^='cta-button']:hover::before {
    flex-direction: column;
    align-items: center;
    justify-content: center;
+   padding: 120px 0;
    background-color: var(--color-neutral-100);
 }
 
@@ -1457,7 +1458,6 @@ a[class^='cta-button']:hover::before {
 .our-process-section {
    width: 100%;
    padding-top: 5rem;
-   /*padding-bottom: 3rem;*/
 
 }
 
@@ -1893,7 +1893,73 @@ a[class^='cta-button']:hover::before {
 /*===============================================================
           contact section
 ==================================================================*/
-.contact-section-container {
+.contact-section-title {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 2em;
+}
+
+.contact-title {
+   text-align: center;
+   font-weight: 900;
+}
+
+.brand-color {
+   color: var(--color-primary-900);
+}
+
+.contact-paragraph {
+   position: relative;
+   margin: 0 auto 0.5em; /* keeps it centered */
+   max-width: 55ch; /* limits characters per line (roughly) */
+   text-align: center; /* optional: center the text itself */
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 1rem;
+   font-weight: 400;
+   line-height: 1.5;
+   color: var(--color-augmented-800);
+   hyphens: auto;
+
+}
+
+@media screen and (min-width: 525px) and (max-width: 542px) {
+   .contact-paragraph {
+      max-width: 45ch
+   }
+}
+
+.contact-section-bottom {
+   position: relative;
+   width: 100%;
+   height: fit-content;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+@media only screen and (max-width: 1540px) {
+   .contact-section-bottom {
+      flex-basis: 66.667%;
+   }
+}
+
+.contact-form-group {
+   position: relative;
+   width: 66.667%;
+   height: fit-content;
+}
+
+@media only screen and (max-width: 1199px) {
+   .contact-form-group {
+      width: 90%;
+   }
+}
+
+.contact-form {
    position: relative;
    width: 100%;
    height: fit-content;
@@ -1901,35 +1967,303 @@ a[class^='cta-button']:hover::before {
    flex-direction: column;
    align-items: center;
    justify-content: center;
+}
+
+.contact-form-content {
+   position: relative;
+   width: 98%;
+   margin: 20px 3%;
+}
+
+.contact-form-content-textarea {
+   position: relative;
+   width: 98%;
+   height: 85px;
+   margin: 20px 3%;
+}
+
+
+.utils-effect-07 {
+   position: relative;
+   width: 100%;
+   display: inline-block;
+   padding: 8px 16px;
+   font: 20/1.5 var(--font-body);
+   letter-spacing: var(--ls-letter-spacing-100);
+   color: var(--color-neutral-800);
+   background-color: transparent;
+   border: 1px solid var(--color-neutral-500);
+   border-radius: var(--br-border-radius-300);
 
 }
 
-.contact-section-title {
+.utils-effect-07 ~ .focus-background-07 {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 0;
+   height: 100%;
+   z-index: -1;
+   background-color: var(--color-neutral-200);
+   transition: 0.4s;
+}
+
+.utils-effect-07:focus ~ .focus-background-07,
+.has-content.utils-effect-07 ~ .focus-background-07 {
+   width: 100%;
+   transition: 0.4s;
+}
+
+.utils-effect-07 ~ label {
+   position: absolute;
+   left: 8px;
+   width: 100%;
+   top: 8px;
+   font-weight: 400;
+   color: var(--color-neutral-800);
+   transition: 0.3s;
+   letter-spacing: var(--ls-letter-spacing-100);
+}
+
+.utils-effect-07:focus ~ .focus-background-07,
+.utils-effect-07.has-content ~ .focus-background-07 {
+   width: 100%;
+   font-weight: 600;
+   transition: 0.4s;
+}
+
+.utils-effect-07:focus ~ label,
+.utils-effect-07.has-content ~ label {
+   top: -18px;
+   font-size: 14px;
+   font-weight: 600;
+   color: var(--color-primary-900);
+   transition: 0.3s;
+}
+
+textarea.utils-effect-07 {
+   hyphens: auto;
+}
+
+
+.contact-form-button {
+   padding: 16px 32px;
+   font-family: var(--font-body), sans-serif;
+   font-size: medium;
+   font-weight: 600;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   color: hsl(210, 0%, 98%);
+   background: linear-gradient(90deg, var(--color-primary-700) 0%, var(--color-primary-700) 50%, var(--color-primary-900) 50%, var(--color-primary-900) 100%);
+   background-repeat: no-repeat;
+   background-size: 200% 100%;
+   background-position: right bottom;
+   border-radius: 5px;
+   border: 1px solid hsl(210, 0%, 18%);
+   cursor: pointer;
+   outline: none;
+   box-shadow: 5px 3px 21px -1px rgba(34, 40, 45, 0.25), 5px 3px 21px -1px rgba(34, 40, 45, 0.25);
+   transition: background-position 0.25s var(--tf-ease-in-out), color 0.5s var(--tf-ease-in-out);
+}
+
+.contact-form-button:hover,
+.contact-form-button:focus {
+   cursor: pointer;
+   color: var(--color-neutral-000);
+
+}
+
+.contact-form-button:hover {
+   background-position: left bottom;
+}
+
+
+/*===============================================================
+          toast-container and toast styles
+==================================================================*/
+.toast-container {
+   position: absolute;
+   bottom: 33.333vh;
+   right: 32px;
+   width: 100%;
+   overflow: hidden;
    display: flex;
    flex-direction: column;
-   align-items: center;
-   justify-content: center;
-   margin-bottom: 3em;
+   align-items: flex-end;
+   padding: 1.5rem;
+
 }
 
-.contact-title {
-   text-align: center;
-   font-weight: 900;
-}
-.contact-paragraph {
+.toast {
    position: relative;
-   margin: 0 auto 0.5em; /* keeps it centered */
-   max-width: 40ch; /* limits characters per line (roughly) */
-   text-align: center; /* optional: center the text itself */
+   width: 400px;
+   height: 160px;
    display: flex;
    align-items: center;
-   justify-content: center;
-   font-size: 1rem;
+   margin: 16px 0;
+   padding: 16px;
    font-weight: 500;
-   line-height: 1.5;
-   color: var(--color-neutral-900);
+   background-color: var(--color-augmented-000);
+   border-top-right-radius: var(--br-border-radius-400);
+   border-bottom-right-radius: var(--br-border-radius-400);
+   box-shadow: var(--bs-box-shadow-bottom-right-500);
+   transform: translateX(100%);
+   animation-name: move-in-from-right;
+   animation-duration: 1s;
+   animation-iteration-count: 1;
+   animation-timing-function: var(--tf-ease);
+   animation-fill-mode: forwards;
+
 }
 
+@media screen and (max-width: 540px) {
+   .toast {
+      width: 300px;
+   }
+}
+@media screen and (max-width: 390px) {
+   .toast-container {
+      right: 16px;
+   }
+   .toast {
+      width: 248px;
+   }
+}
+
+.toast.move-back-to-right {
+   animation-name: move-back-to-right;
+   animation-duration: 1s;
+   animation-iteration-count: 1;
+   animation-timing-function: var(--tf-ease);
+   animation-fill-mode: forwards;
+}
+
+
+.toast.success {
+   gap: 8px;
+   color: var(--color-neutral-000);
+   background-color: var(--color-semantic-success-200);
+   border-left: 8px solid var(--color-semantic-success-400);
+}
+
+.toast.error {
+   gap: 8px;
+   color: var(--color-neutral-000);
+   background-color: var(--color-semantic-alert-200);
+   border-left: 8px solid var(--color-semantic-alert-400);
+}
+
+.toast.warn {
+   gap: 8px;
+   color: var(--color-neutral-000);
+   background-color: var(--color-semantic-warn-200);
+   border-left: 8px solid var(--color-semantic-warn-400);
+}
+
+.toast.inform {
+   gap: 8px;
+   color: var(--color-neutral-000);
+   background-color: var(--color-semantic-inform-200);
+   border-left: 8px solid var(--color-semantic-inform-400);
+}
+
+.toast.success::after {
+   content: '';
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 5px;
+   background-color: var(--color-semantic-success-400);
+   animation: progress-left 4s linear forwards;
+   animation-delay: 1s;
+}
+
+.toast.error::after {
+   content: '';
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 5px;
+   background-color: var(--color-semantic-alert-400);
+   animation: progress-left 4s linear forwards;
+   animation-delay: 1s;
+}
+
+.toast.warn::after {
+   content: '';
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 5px;
+   background-color: var(--color-semantic-warn-400);
+   animation: progress-left 4s linear forwards;
+   animation-delay: 1s;
+}
+
+.toast.inform::after {
+   content: '';
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 5px;
+   background-color: var(--color-semantic-inform-400);
+   animation: progress-left 4s linear forwards;
+   animation-delay: 1s;
+}
+
+/*===============================================================
+          fontawesome icons styles
+==================================================================*/
+.fa-solid {
+   font-size: 1.5rem;
+}
+
+/*===============================================================
+          keyframes
+==================================================================*/
+@keyframes fade-out {
+   from {
+      opacity: 1;
+   }
+   to {
+      opacity: 0;
+   }
+}
+
+@keyframes progress-left {
+   100% {
+      width: 0;
+   }
+}
+
+@keyframes move-in-from-right {
+   0% {
+      opacity: 0;
+      transform: translateX(2000px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateX(0);
+   }
+}
+
+@keyframes move-back-to-right {
+   0% {
+      opacity: 1;
+      transform: translateX(0);
+   }
+   50% {
+      transform: translateX(-50px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateX(2000px);
+   }
+}
 
 /*===============================================================
           footer section

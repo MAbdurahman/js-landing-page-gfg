@@ -3,12 +3,19 @@
 <head>
     <meta charset='UTF-8'>
     <meta content='width=device-width, initial-scale=1.0' name='viewport'/>
+    <meta content='Mahdi Abdurrahman' name='author'>
+    <meta content='Landing Page for Web Development Agency with modern UI Components and animations, custom testimonial draggable slider, custom toast notification, interactive form validation, light/dark mode toggle, and other features.'
+          name='description'>
+    <meta content='Interactive Form Validation, Flexbox, Grid Layout, Key Event Feedback, Custom Toast Notifications, custom Testimonial Draggable Slider' name='keywords'>
     <!-- favicon -->
     <link href='favicon.ico' rel='icon' sizes='64x64'>
     <!-- google fonts -->
     <link href='https://fonts.googleapis.com' rel='preconnect'>
     <link crossorigin href='https://fonts.gstatic.com' rel='preconnect'>
     <link href='https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'
+          rel='stylesheet'>
+    <!-- fontawesome -->
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css'
           rel='stylesheet'>
     <!-- normalize styles-->
     <link href='./css/normalize.css' rel='stylesheet'>
@@ -534,7 +541,7 @@
 </section>
 
 <!-- testimonial section -->
-<section class='testimonial-section section-four' id='testimonials'>
+<section class='section section-four' id='testimonials'>
     <div class='utils-container'>
         <div class='testimonial-section-title'>
             <h2 class='testimonial-title'><span class='brand-color'>Our</span>Testimonials
@@ -683,13 +690,56 @@
     <div class='utils-container'>
         <div class='contact-section-title'>
             <h2 class='contact-title'>Contact<span class='brand-color'>Us</span></h2>
-            <p class='contact-paragraph'>
-                We want to build a website that works as hard as you do. Tell us what you need,
-                what is not working, and where you want to go next. We will get back to you
-                with the best next step.
-            </p>
+            <h5 class='contact-paragraph'>
+                We want to build a website that works as hard as you do. Tell us what
+                you need, what is not working for you, and where you want to go next.
+                We will get back to you with the best next step.
+            </h5>
         </div>
-    
+        <!-- begins contact bottom -->
+        <div class='contact-section-bottom'>
+            <div class='contact-form-group' id='contact-form-group'>
+                <form action='' class='contact-form' id='contact-form'>
+                    <div class='contact-form-content js-effect-07'>
+                        <input class='utils-effect-07' id='input-01'
+                               name='fullName'
+                               placeholder='' type='text'/>
+                        <label for='input-01'>Full name</label>
+                        <span class='focus-background-07'></span>
+                        <span class='contact-form-input-prompt'
+                              id='contact-form-name-prompt'>&nbsp;</span>
+                    </div>
+                    <div class='contact-form-content js-effect-07'>
+                        <input class='utils-effect-07' id='input-02'
+                               name='email'
+                               placeholder='' type='text'/>
+                        <label for='input-02'>Email</label>
+                        <span class='focus-background-07'></span>
+                        <span class='contact-form-input-prompt'
+                              id='contact-form-email-prompt'>&nbsp;</span>
+                    </div>
+                    <div class='contact-form-content-textarea js-effect-07'>
+                                <textarea class='utils-effect-07'
+                                          id='textarea-input'
+                                          minlength='10'
+                                          maxlength='282' name='message'
+                                          placeholder='' rows='3'
+                                          type='textarea'></textarea>
+                        <label for='textarea-input'>Message</label>
+                        <span class='focus-background-07'></span>
+                        <span class='contact-form-input-prompt-textarea'
+                              id='contact-form-message-prompt'>&nbsp;</span>
+                    </div>
+                    <div class='toast-container'></div>
+                    <div class='contact-form-content'>
+                        <input class='contact-form-button submit'
+                               id='contact-form-submit'
+                               type='submit'
+                               value='Send Message'>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 </section>
 <!--<footer class='footer section-footer'>
