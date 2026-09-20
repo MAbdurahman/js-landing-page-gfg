@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function () {
       marqueeSliderLeft.classList.toggle('is-paused', isPaused);
       marqueeSliderRight.classList.toggle('is-paused', isPaused);
       pauseButton.textContent = isPaused ? 'Resume' : 'Pause';
-      pauseButton.setAttribute('aria-label', String(isPaused));
+      pauseButton.setAttribute('aria-pressed', String(isPaused));
    }
 
    pauseButton.addEventListener('click', function () {
