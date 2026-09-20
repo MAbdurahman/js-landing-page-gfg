@@ -2313,6 +2313,19 @@ textarea.has-content ~ label {
 a.footer-bottom-color{
    color: var(--color-neutral-000);
 }
+
+@media screen and (max-width: 850px) {
+   .footer-grid {
+      grid-template-columns: repeat(2, 1fr);
+   }
+}
+
+@media screen and (max-width: 520px) {
+   .footer-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+   }
+}
 /*===============================================================
            reveal
 ==================================================================*/
