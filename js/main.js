@@ -522,7 +522,7 @@ document.addEventListener('DOMContentLoaded', () => {
    }
 
    function performValidForm() {
-      showToast('success', 'Thanks! Your message has been validated.');
+      showToast('success', 'Your message has been validated!');
 
       // No email is sent. Reset only after a successful validation.
       document.getElementById('contact-form').reset();

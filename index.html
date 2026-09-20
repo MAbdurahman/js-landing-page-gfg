@@ -6,7 +6,8 @@
     <meta content='Mahdi Abdurrahman' name='author'>
     <meta content='Landing Page for Web Development Agency with modern UI Components and animations, custom testimonial draggable slider, custom toast notification, interactive form validation, light/dark mode toggle, and other features.'
           name='description'>
-    <meta content='Interactive Form Validation, Flexbox, Grid Layout, Key Event Feedback, Custom Toast Notifications, custom Testimonial Draggable Slider' name='keywords'>
+    <meta content='Interactive Form Validation, Flexbox, Grid Layout, Key Event Feedback, Custom Toast Notifications, custom Testimonial Draggable Slider'
+          name='keywords'>
     <!-- favicon -->
     <link href='favicon.ico' rel='icon' sizes='64x64'>
     <!-- google fonts -->
@@ -699,7 +700,7 @@
         <!-- begins contact bottom -->
         <div class='contact-section-bottom'>
             <div class='contact-form-group' id='contact-form-group'>
-                <form action='' class='contact-form' id='contact-form'>
+                <form action='' class='contact-form' id='contact-form' novalidate>
                     <div class='contact-form-content js-effect-07'>
                         <input class='utils-effect-07' id='input-01'
                                name='fullName'
@@ -721,8 +722,7 @@
                     <div class='contact-form-content-textarea js-effect-07'>
                                 <textarea class='utils-effect-07'
                                           id='textarea-input'
-                                          minlength='10'
-                                          maxlength='282' name='message'
+                                          name='message'
                                           placeholder='' rows='3'
                                           type='textarea'></textarea>
                         <label for='textarea-input'>Message</label>
@@ -742,12 +742,40 @@
         </div>
     </div>
 </section>
-<!--<footer class='footer section-footer'>
+<!-- begin of footer -->
+<footer class='footer section-footer'>
     <div class='utils-container'>
-        <div class='footer-section-container'>
-            <h3 class='footer-title'>footer section</h3>
+        <div class='footer-container'>
+            <div class='footer-grid'>
+                <!-- column 1 -->
+                <section class='company'>
+                    <h5 class='footer-heading'>Agency.AI</h5>
+                </section>
+                
+                <!-- column 2 -->
+                <section class='navigation'>
+                    <h5 class='footer-heading'>Navigation</h5>
+                </section>
+                
+                <!-- column 3 -->
+                <section class='contact'>
+                    <h5 class='footer-heading'>Contact</h5>
+                </section>
+                
+                <!-- column 4 -->
+                <section class='social-media'>
+                    <h5 class='footer-heading'>Social Media</h5>
+                </section>
+            
+            </div>
+            <div class='footer-bottom'>
+                <a class='footer-bottom-color terms-conditions' href='/'>Terms &amp; Conditions</a>
+                <a class='footer-bottom-color privacy' href='/'>Privacy Policy</a>
+                <p class='footer-bottom-color copyright'>&copy;&nbsp;2026 Agency.AI, All rights
+                    reserved</p>
+            </div>
         </div>
     </div>
-</footer>-->
+</footer>
 </body>
 </html>

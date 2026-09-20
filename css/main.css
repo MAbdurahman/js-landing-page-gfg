@@ -65,6 +65,7 @@
    --color-primary-800: hsl(277, 77%, 45%);
    --color-primary-900: hsl(277, 77%, 35%);
    --color-primary-900a: #69159e;
+   --color-primary-900-footer: hsl(257, 40%, 14%);
    /* neutral colors */
    --color-neutral-000: hsl(277, 0%, 98%);
    --color-neutral-100: hsl(277, 0%, 88%);
@@ -986,17 +987,17 @@ a[class^='cta-button']:hover::before {
    background-color: var(--color-neutral-100);
 }
 
-.section-six {
+/*.section-six {
    display: flex;
    flex-direction: column;
    align-items: center;
    justify-content: center;
    background-color: var(--color-neutral-100);
-}
+}*/
 
 .section-footer {
    display: flex;
-   flex-direction: column;
+   flex-direction: row;
    align-items: center;
    justify-content: center;
    background-color: var(--color-neutral-700);
@@ -2282,7 +2283,36 @@ textarea.has-content ~ label {
 /*===============================================================
           footer section
 ==================================================================*/
+.footer {
+   background-color: var(--color-primary-900-footer);
+}
 
+.footer-container {
+   display: flex;
+   flex-direction: column;
+
+   padding: 1.25rem 0;
+}
+.footer-grid {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 2.5rem;
+   padding-bottom: 3rem;
+}
+
+.footer-heading {
+   text-align: center;
+}
+
+.footer-bottom {
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+}
+.footer-bottom-color,
+a.footer-bottom-color{
+   color: var(--color-neutral-000);
+}
 /*===============================================================
            reveal
 ==================================================================*/
