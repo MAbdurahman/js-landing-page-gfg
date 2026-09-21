@@ -2296,13 +2296,66 @@ textarea.has-content ~ label {
 }
 .footer-grid {
    display: grid;
-   grid-template-columns: repeat(4, 1fr);
+   /*grid-template-columns: repeat(4, 1fr);*/
+   grid-template-columns: 40% 16.67% 16.67% 16.67%;
    gap: 2.5rem;
    padding-bottom: 3rem;
+   margin-bottom: 1em;
+   border-bottom: 2px solid var(--color-neutral-500);
 }
 
 .footer-heading {
+   font-size: 1rem;
+   font-weight: 900;
    text-align: center;
+   margin: 1em 0 0.5em;
+}
+
+.mission-statement-paragraph {
+   font-weight: 500;
+}
+
+.footer-navigation-list,
+.footer-contact-list {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 1em
+}
+
+.footer-navigation-link,
+.footer-contact-link{
+   font-weight: 500;
+   text-transform: capitalize;
+   color: var(--color-neutral-000);
+}
+
+.footer-contact-link {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 0.5em;
+}
+
+.footer-contact-link i.fa-solid {
+   font-size: 1rem;
+}
+
+.footer-social-list {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-evenly;
+   gap: 1em;
+}
+.footer-social-link {
+   font-size: 1.2rem;
+   color: var(--color-neutral-300);
+
+}
+.footer-social-link:not(:last-child) {
+   margin-right: 2rem;
 }
 
 .footer-bottom {
@@ -2312,12 +2365,14 @@ textarea.has-content ~ label {
 }
 .footer-bottom-color,
 a.footer-bottom-color{
-   color: var(--color-neutral-000);
+   font-size: 0.75rem;
+   color: var(--color-neutral-500);
 }
 
 @media screen and (max-width: 850px) {
    .footer-grid {
       grid-template-columns: repeat(2, 1fr);
+      /*grid-template-columns: 66.667% 33.333%;*/
    }
 }
 
