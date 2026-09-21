@@ -1300,9 +1300,9 @@ a[class^='cta-button']:hover::before {
 .marquee-track {
    width: max-content;
    display: flex;
-   align-items: center;
-   gap: 18px;
-   padding: 0 clamp(12px, 3vw, 28px);
+   /*align-items: center;
+   gap: 18px;*/
+   padding: 0;
 }
 
 .marquee-track.left {
@@ -1318,9 +1318,10 @@ a[class^='cta-button']:hover::before {
 }
 
 .logo {
-   height: 60px;
-   width: auto;
-   display: block;
+   height: 32px;
+   width: 152px;
+   /*display: block;*/
+   flex: 0 0 auto;
    object-fit: contain;
    user-select: none;
    -webkit-user-drag: none;
@@ -2345,6 +2346,7 @@ a.footer-bottom-color{
 /*===============================================================
            keyframes
 ==================================================================*/
+/*
 @keyframes scroll-left {
    from {
       transform: translateX(0);
@@ -2361,4 +2363,31 @@ a.footer-bottom-color{
    to {
       transform: translateX(0);
    }
+}*/
+
+
+@keyframes scroll-left {
+   to {
+      transform: translate3d(-50%, 0, 0);
+   }
 }
+
+@keyframes scroll-right {
+   from {
+      transform: translate3d(-50%, 0, 0);
+   }
+   to {
+      transform: translate3d(0, 0, 0);
+   }
+}
+
+/*
+@keyframes scroll-left {
+   from { transform: translate3d(0, 0, 0); }
+   to   { transform: translate3d(-2720px, 0, 0); }
+}
+
+@keyframes scroll-right {
+   from { transform: translate3d(-2720px, 0, 0); }
+   to   { transform: translate3d(0, 0, 0); }
+}*/
