@@ -650,7 +650,8 @@ button[aria-pressed='true'] {
    color: var(--color-primary-600);
 }
 
-.navbar-list-link.active {
+.navbar-list-link.active,
+.footer-navigation-link.active {
    color: var(--color-primary-600);
    transform: scale(1.25);
 }

@@ -38,8 +38,9 @@ document.addEventListener('DOMContentLoaded', function () {
    const icon = document.getElementById('lightDarkIcon');
    const menuButton = document.getElementById('menuButton');
    const navbarList = document.getElementById('navbarList');
-   const navLinks = document.querySelectorAll('.navbar-list-link');
-   const footerLinks = document.querySelectorAll('.footer-navigation-link');
+   const navbar = document.getElementById('navbar');
+   /*const navLinks = document.querySelectorAll('.navbar-list-link');
+   const footerLinks = document.querySelectorAll('.footer-navigation-link');*/
    const navbarLogo = document.getElementById('navbar-logo-brand');
    const homeLink = document.getElementById('navbar-home-link');
    const aboutLink = document.getElementById('navbar-about-link');
@@ -49,6 +50,64 @@ document.addEventListener('DOMContentLoaded', function () {
    const servicesLink = document.getElementById('navbar-services-link');
    const aboutButtonLink = document.getElementById('about-button');
    const menuToggleBreakPoint = 821;
+
+   const navLinks = document.querySelectorAll('.navbar-list-link, .footer-navigation-link');
+   const sections = [...document.querySelectorAll('.section[id]')];
+   const navbarHeight = navbar.offsetHeight;
+
+   function setActiveLink(sectionId) {
+      navLinks.forEach(link => {
+         const isCurrentSection = link.hash === `#${sectionId}`;
+         link.classList.toggle('active', isCurrentSection);
+      });
+   }
+
+   /*************************** initial state ***************************/
+   setActiveLink('home');
+
+   /*** keep both navbar and footer synchronized immediately on click ***/
+   navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+         const sectionId = link.hash.slice(1);
+
+         if (sectionId) {
+            setActiveLink(sectionId);
+         }
+      });
+   });
+
+   function getNavbarHeight() {
+      return navbar.offsetHeight;
+   }
+   /**************** update active links while scrolling ****************/
+   const observer = new IntersectionObserver(() => {
+         const visibleSections = sections.filter(section => {
+            const rect = section.getBoundingClientRect();
+
+            return (
+               rect.top <= window.innerHeight * 0.45 && rect.bottom > navbarHeight
+            );
+         })
+            .sort((a, b) => {
+               const aDistance = Math.abs(a.getBoundingClientRect().top - navbarHeight);
+               const bDistance = Math.abs(b.getBoundingClientRect().top - navbarHeight);
+
+               return aDistance - bDistance;
+            });
+         if (visibleSections[0]) {
+            setActiveLink(visibleSections[0].id);
+         }
+      },
+      {
+         root: null,
+         threshold: 0,
+         rootMargin: `-${getNavbarHeight()}px 0px -50% 0px`
+      });
+
+   sections.forEach((section) => {
+      observer.observe(section)
+   });
+
 
    const pauseButton = document.getElementById('pause-button');
    const marqueeSliderLeft = document.getElementById('marquee-slider-left');
@@ -61,20 +120,20 @@ document.addEventListener('DOMContentLoaded', function () {
       icon.src = icon.src.includes('moon') ? './assets/img/theme/sun.png' : './assets/img/theme/moon.png';
    });
 
-   ctaButton.addEventListener('click', function () {
-      navLinks.forEach((item) => item.classList.remove('active'));
-      servicesLink.classList.add('active');
-   });
+   /*   ctaButton.addEventListener('click', function () {
+         navLinks.forEach((item) => item.classList.remove('active'));
+         servicesLink.classList.add('active');
+      });
 
-   ctaButtonTwo.addEventListener('click', function () {
-      navLinks.forEach((item) => item.classList.remove('active'));
-      servicesLink.classList.add('active');
-   });
+      ctaButtonTwo.addEventListener('click', function () {
+         navLinks.forEach((item) => item.classList.remove('active'));
+         servicesLink.classList.add('active');
+      });
 
-   aboutButtonLink.addEventListener('click', function () {
-      navLinks.forEach((item) => item.classList.remove('active'));
-      servicesLink.classList.add('active');
-   });
+      aboutButtonLink.addEventListener('click', function () {
+         navLinks.forEach((item) => item.classList.remove('active'));
+         servicesLink.classList.add('active');
+      });*/
 
 
    menuButton.addEventListener('click', function () {
@@ -89,19 +148,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
    });
 
-   navLinks.forEach(link => {
-      link.addEventListener('click', function () {
-         navLinks.forEach((item) => item.classList.remove('active'));
-         this.classList.add('active');
+   /*   navLinks.forEach(link => {
+         link.addEventListener('click', function () {
+            navLinks.forEach((item) => item.classList.remove('active'));
+            this.classList.add('active');
+         });
       });
-   });
 
-   footerLinks.forEach(link => {
-      link.addEventListener('click', function () {
-         footerLinks.forEach((item) => item.classList.remove('active'));
-         this.classList.add('active');
-      })
-   })
+      footerLinks.forEach(link => {
+         link.addEventListener('click', function () {
+            footerLinks.forEach((item) => item.classList.remove('active'));
+            this.classList.add('active');
+         })
+      })*/
 
    navbarLogo.addEventListener('click', function () {
       navLinks.forEach((item) => item.classList.remove('active'));
@@ -119,11 +178,12 @@ document.addEventListener('DOMContentLoaded', function () {
       }
    });
 
-   learnMoreLink.addEventListener('click', function () {
+   /*learnMoreLink.addEventListener('click', function () {
       navLinks.forEach((item) => item.classList.remove('active'));
       aboutLink.classList.add('active');
 
-   })
+   });*/
+
 
    /*===============================================================
              logo-marquee section
@@ -183,90 +243,90 @@ document.addEventListener('DOMContentLoaded', function () {
    const navbarLinks = document.querySelectorAll('.navbar-list-link');
    const footerLinks = document.querySelectorAll('.footer-navigation-link');
 
-/*   const sections = [...document.querySelectorAll('.section[id]')];
+   /*   const sections = [...document.querySelectorAll('.section[id]')];
 
-   function setActive(id) {
-      navbarLinks.forEach((item) => item.classList.toggle('active', navbarLinks === `#${id}`));
-   }
-
-   const observer = new IntersectionObserver(entries => {
-      const visible = sections.filter((section) => {
-         const rect = section.getBoundingClientRect();
-         return rect.top < window.innerHeight * 0.45 && rect.bottom > 80;
-
-      }).sort((a, b) => Math.abs(a.getBoundingClientRect().top - 80) - Math.abs(b.getBoundingClientRect().top - 80));
-
-      if (visible[0]) {
-         setActive(visible[0].id);
+      function setActive(id) {
+         navbarLinks.forEach((item) => item.classList.toggle('active', navbarLinks === `#${id}`));
       }
 
-   }, {threshold: 0, rootMargin: '-80px 0px -55% 0px'});
+      const observer = new IntersectionObserver(entries => {
+         const visible = sections.filter((section) => {
+            const rect = section.getBoundingClientRect();
+            return rect.top < window.innerHeight * 0.45 && rect.bottom > 80;
 
-   sections.forEach(section => { observer.observe(section); });*/
+         }).sort((a, b) => Math.abs(a.getBoundingClientRect().top - 80) - Math.abs(b.getBoundingClientRect().top - 80));
 
-/*   const regularOptions = {
-      rootMargin: '0px',
-      threshold: 0.7,
-   }
-   const longerOptions = {
-      rootMargin: '0px',
-      threshold: 0.2,
-   }
-
-   const regularSections = document.querySelectorAll('.js-scroll-spy');
-   const longerSections = document.querySelectorAll('.js-scroll-spy-longer');
-   const navbarLinks = document.querySelectorAll('.navbar-list-link');
-   const footerLinks = document.querySelectorAll('.footer-navigation-link');
-
-   const regularSectionObserver = new IntersectionObserver(addNavigationLinksActiveClass, regularOptions);
-   const longerSectionObserver = new IntersectionObserver(addNavigationLinksLongerActiveClass, longerOptions);
-
-   regularSections.forEach(section => {
-      regularSectionObserver.observe(section);
-   });
-
-   longerSections.forEach(section => {
-      longerSectionObserver.observe(section);
-   });
-
-   function addNavigationLinksActiveClass(entries, regularSectionObserver) {
-      console.log(entries)
-      entries.forEach((entry) => {
-         if (entry.isIntersecting) {
-            let currentLink = document.querySelector(`#navbarList a[href ='#${entries.target.id}']`);
-            let currentFooterLink = document.querySelector(`#footer-navigation-list a[href='#${entries.target.id}']`)
-
-            removeNavbarLinksActiveClass();
-            removeFooterNavLinksActiveClass();
-
-            currentLink.classList.add('active');
-            currentFooterLink.classList.add('active');
+         if (visible[0]) {
+            setActive(visible[0].id);
          }
+
+      }, {threshold: 0, rootMargin: '-80px 0px -55% 0px'});
+
+      sections.forEach(section => { observer.observe(section); });*/
+
+   /*   const regularOptions = {
+         rootMargin: '0px',
+         threshold: 0.7,
+      }
+      const longerOptions = {
+         rootMargin: '0px',
+         threshold: 0.2,
+      }
+
+      const regularSections = document.querySelectorAll('.js-scroll-spy');
+      const longerSections = document.querySelectorAll('.js-scroll-spy-longer');
+      const navbarLinks = document.querySelectorAll('.navbar-list-link');
+      const footerLinks = document.querySelectorAll('.footer-navigation-link');
+
+      const regularSectionObserver = new IntersectionObserver(addNavigationLinksActiveClass, regularOptions);
+      const longerSectionObserver = new IntersectionObserver(addNavigationLinksLongerActiveClass, longerOptions);
+
+      regularSections.forEach(section => {
+         regularSectionObserver.observe(section);
       });
-   }
 
-   function addNavigationLinksLongerActiveClass(entries, longerSectionObserver) {
-      entries.forEach((entry) => {
-         if (entry.isIntersecting) {
-            let currentLink = document.querySelector(`#navbarList a[href='#${entries.target.id}']`);
-            let currentFooterLink = document.querySelector(`#footer-navigation-list a[href='#${entries.target.id}']`);
-
-            removeNavbarLinksActiveClass();
-            removeFooterNavLinksActiveClass();
-
-            currentLink.classList.add('active');
-            currentFooterLink.classList.add('active');
-         }
+      longerSections.forEach(section => {
+         longerSectionObserver.observe(section);
       });
-   }
 
-   function removeNavbarLinksActiveClass() {
-      navbarLinks.forEach((item) => item.classList.remove('active'));
-   }
+      function addNavigationLinksActiveClass(entries, regularSectionObserver) {
+         console.log(entries)
+         entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+               let currentLink = document.querySelector(`#navbarList a[href ='#${entries.target.id}']`);
+               let currentFooterLink = document.querySelector(`#footer-navigation-list a[href='#${entries.target.id}']`)
 
-   function removeFooterNavLinksActiveClass() {
-      footerLinks.forEach((item) => item.classList.remove('active'));
-   }*/
+               removeNavbarLinksActiveClass();
+               removeFooterNavLinksActiveClass();
+
+               currentLink.classList.add('active');
+               currentFooterLink.classList.add('active');
+            }
+         });
+      }
+
+      function addNavigationLinksLongerActiveClass(entries, longerSectionObserver) {
+         entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+               let currentLink = document.querySelector(`#navbarList a[href='#${entries.target.id}']`);
+               let currentFooterLink = document.querySelector(`#footer-navigation-list a[href='#${entries.target.id}']`);
+
+               removeNavbarLinksActiveClass();
+               removeFooterNavLinksActiveClass();
+
+               currentLink.classList.add('active');
+               currentFooterLink.classList.add('active');
+            }
+         });
+      }
+
+      function removeNavbarLinksActiveClass() {
+         navbarLinks.forEach((item) => item.classList.remove('active'));
+      }
+
+      function removeFooterNavLinksActiveClass() {
+         footerLinks.forEach((item) => item.classList.remove('active'));
+      }*/
 });
 
 /*===============================================================
@@ -428,8 +488,8 @@ document.addEventListener('DOMContentLoaded', () => {
    carousel.addEventListener('mouseup', handleDragEnd);
    carousel.addEventListener('mouseleave', handleDragEnd);
 
-   carousel.addEventListener('touchstart', handleDragStart, { passive: true });
-   carousel.addEventListener('touchmove', handleDragMove, { passive: false });
+   carousel.addEventListener('touchstart', handleDragStart, {passive: true});
+   carousel.addEventListener('touchmove', handleDragMove, {passive: false});
    carousel.addEventListener('touchend', handleDragEnd);
 
    carousel.addEventListener('dragstart', (e) => e.preventDefault());
