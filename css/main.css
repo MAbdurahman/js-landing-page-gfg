@@ -944,6 +944,7 @@ a[class^='cta-button']:hover::before {
 }
 
 .section-one {
+   scroll-margin-top: 80px;
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -953,6 +954,7 @@ a[class^='cta-button']:hover::before {
 }
 
 .section-two {
+   scroll-margin-top: 80px;
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -962,6 +964,7 @@ a[class^='cta-button']:hover::before {
 }
 
 .section-three {
+   scroll-margin-top: 80px;
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -970,6 +973,7 @@ a[class^='cta-button']:hover::before {
    background-color: var(--color-neutral-000);
 }
 .section-four {
+   scroll-margin-top: 80px;
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -979,6 +983,7 @@ a[class^='cta-button']:hover::before {
 }
 
 .section-five {
+   scroll-margin-top: 80px;
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -987,13 +992,6 @@ a[class^='cta-button']:hover::before {
    background-color: var(--color-neutral-100);
 }
 
-/*.section-six {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-   background-color: var(--color-neutral-100);
-}*/
 
 .section-footer {
    display: flex;
@@ -1240,7 +1238,7 @@ a[class^='cta-button']:hover::before {
 .sub-section-logo-paragraph {
    position: relative;
    margin: 0 auto 0.5em; /* keeps it centered */
-   max-width: 55ch; /* limits characters per line (roughly) */
+   max-width: 45ch; /* limits characters per line (roughly) */
    text-align: center; /* optional: center the text itself */
    display: flex;
    align-items: center;
@@ -1249,6 +1247,7 @@ a[class^='cta-button']:hover::before {
    font-weight: 500;
    line-height: 1.5;
    color: var(--color-augmented-900);
+   hyphens: auto;
 
 }
 
@@ -2339,6 +2338,25 @@ textarea.has-content ~ label {
    align-items: center;
    justify-content: center;
    gap: 0.25em;
+}
+
+.footer-navigation-link {
+   font-weight: 700;
+   text-transform: capitalize;
+   white-space: nowrap;
+   cursor: pointer;
+   transition: color 0.5s, transform 0.5s;
+}
+
+.footer-navigation-link:hover,
+.footer-navigation-link:focus,
+.footer-navigation-link:active {
+   color: var(--color-primary-600);
+}
+
+.footer-navigation-link.active {
+   color: var(--color-primary-600);
+   transform: scale(1.25);
 }
 
 .footer-contact-link i.fa-solid,

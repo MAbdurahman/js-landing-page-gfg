@@ -18,6 +18,7 @@
     <!-- fontawesome -->
     <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css'
           rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <!-- normalize styles-->
     <link href='./css/normalize.css' rel='stylesheet'>
     <!-- main styles -->
@@ -74,7 +75,7 @@
     </nav>
 </div>
 <!-- home section -->
-<section class='section section-one' id='home'>
+<section class='section section-one js-scroll-spy' id='home'>
     <div class='utils-container'>
         <div class='home-section-container'>
             <h1 class='header-title'>Discover our solutions<br><span
@@ -95,7 +96,7 @@
     </div>
 </section>
 <!-- about section -->
-<section class='section section-two' id='about'>
+<section class='section section-two js-scroll-spy' id='about'>
     <div class='utils-container'>
         <div class='about-section-container'>
             <div class='about-section-title'>
@@ -250,7 +251,7 @@
 </section>
 
 <!-- services section -->
-<section class='section section-three' id='services'>
+<section class='section section-three js-scroll-spy-longer' id='services'>
     <div class='utils-container'>
         <div class='services-section-container'>
             <div class='services-section-title'>
@@ -538,7 +539,7 @@
 </section>
 
 <!-- testimonial section -->
-<section class='section section-four' id='testimonials'>
+<section class='section section-four js-scroll-spy' id='testimonials'>
     <div class='utils-container'>
         <div class='testimonial-section-title'>
             <h2 class='testimonial-title'><span class='brand-color'>Our</span>Testimonials
@@ -683,7 +684,7 @@
 </section>
 
 <!-- contact section -->
-<section class='section section-five' id='contact'>
+<section class='section section-five js-scroll-spy' id='contact'>
     <div class='utils-container'>
         <div class='contact-section-title'>
             <h2 class='contact-title'>Contact<span class='brand-color'>Us</span></h2>
@@ -756,7 +757,7 @@
                     <h6 class='footer-heading'>Navigation</h6>
                     <ul class='footer-navigation-list' id='footer-navigation-list'>
                         <li class='footer-navigation-link-item'>
-                            <a href='#home' class='footer-navigation-link'>home</a>
+                            <a href='#home' class='footer-navigation-link active'>home</a>
                         </li>
                         <li class='footer-navigation-link-item'>
                             <a href='#about' class='footer-navigation-link'>about</a>
@@ -784,7 +785,8 @@
                         </li>
                         <li class='footer-contact-link-item'>
                             <a href='sms:+19018284631' class='footer-contact-link'>
-                                <i class="fa-solid fa-mobile"></i>&nbsp;Text Us
+                                <!--<i class="fa-solid fa-comment-sms"></i>&nbsp;Text Us-->
+                                <i class="fa-solid fa-message"></i>&nbsp;Text Us
                             </a>
                         </li>
                         <li class='footer-contact-link-item'>
@@ -816,7 +818,7 @@
                         </li>
                         <li class='footer-social-link-item'>
                             <a href="https://x.com" target="_blank" rel="noreferrer" class='footer-social-link'>
-                                <i class="fa-brands fa-twitter"></i>&nbsp;Twitter
+                                <i class="fa-brands fa-x-twitter"></i>&nbsp;Twitter
                             </a>
                         </li>
                     </ul>
@@ -827,7 +829,7 @@
                 
                 <a class='footer-bottom-color terms-conditions' href='/'>Terms
                     &amp; Conditions</a>
-                <a class='footer-bottom-color privacy' href='/'>Privacy Policy</a>
+                <a class='footer-bottom-color privacy' href='#'>Privacy Policy</a>
                 <p class='footer-bottom-color copyright'>&copy;&nbsp;2026 Agency.AI,
                     All rights
                     reserved</p>

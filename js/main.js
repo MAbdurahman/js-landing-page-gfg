@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
    const menuButton = document.getElementById('menuButton');
    const navbarList = document.getElementById('navbarList');
    const navLinks = document.querySelectorAll('.navbar-list-link');
+   const footerLinks = document.querySelectorAll('.footer-navigation-link');
    const navbarLogo = document.getElementById('navbar-logo-brand');
    const homeLink = document.getElementById('navbar-home-link');
    const aboutLink = document.getElementById('navbar-about-link');
@@ -94,6 +95,13 @@ document.addEventListener('DOMContentLoaded', function () {
          this.classList.add('active');
       });
    });
+
+   footerLinks.forEach(link => {
+      link.addEventListener('click', function () {
+         footerLinks.forEach((item) => item.classList.remove('active'));
+         this.classList.add('active');
+      })
+   })
 
    navbarLogo.addEventListener('click', function () {
       navLinks.forEach((item) => item.classList.remove('active'));
@@ -163,6 +171,102 @@ document.addEventListener('DOMContentLoaded', function () {
       });
    });
 
+});
+
+/*===============================================================
+          js-scroll-spy scripts
+==================================================================*/
+document.addEventListener('DOMContentLoaded', function () {
+   console.log('DOMContentLoaded has loaded for js-scroll-spy');
+
+
+   const navbarLinks = document.querySelectorAll('.navbar-list-link');
+   const footerLinks = document.querySelectorAll('.footer-navigation-link');
+
+/*   const sections = [...document.querySelectorAll('.section[id]')];
+
+   function setActive(id) {
+      navbarLinks.forEach((item) => item.classList.toggle('active', navbarLinks === `#${id}`));
+   }
+
+   const observer = new IntersectionObserver(entries => {
+      const visible = sections.filter((section) => {
+         const rect = section.getBoundingClientRect();
+         return rect.top < window.innerHeight * 0.45 && rect.bottom > 80;
+
+      }).sort((a, b) => Math.abs(a.getBoundingClientRect().top - 80) - Math.abs(b.getBoundingClientRect().top - 80));
+
+      if (visible[0]) {
+         setActive(visible[0].id);
+      }
+
+   }, {threshold: 0, rootMargin: '-80px 0px -55% 0px'});
+
+   sections.forEach(section => { observer.observe(section); });*/
+
+/*   const regularOptions = {
+      rootMargin: '0px',
+      threshold: 0.7,
+   }
+   const longerOptions = {
+      rootMargin: '0px',
+      threshold: 0.2,
+   }
+
+   const regularSections = document.querySelectorAll('.js-scroll-spy');
+   const longerSections = document.querySelectorAll('.js-scroll-spy-longer');
+   const navbarLinks = document.querySelectorAll('.navbar-list-link');
+   const footerLinks = document.querySelectorAll('.footer-navigation-link');
+
+   const regularSectionObserver = new IntersectionObserver(addNavigationLinksActiveClass, regularOptions);
+   const longerSectionObserver = new IntersectionObserver(addNavigationLinksLongerActiveClass, longerOptions);
+
+   regularSections.forEach(section => {
+      regularSectionObserver.observe(section);
+   });
+
+   longerSections.forEach(section => {
+      longerSectionObserver.observe(section);
+   });
+
+   function addNavigationLinksActiveClass(entries, regularSectionObserver) {
+      console.log(entries)
+      entries.forEach((entry) => {
+         if (entry.isIntersecting) {
+            let currentLink = document.querySelector(`#navbarList a[href ='#${entries.target.id}']`);
+            let currentFooterLink = document.querySelector(`#footer-navigation-list a[href='#${entries.target.id}']`)
+
+            removeNavbarLinksActiveClass();
+            removeFooterNavLinksActiveClass();
+
+            currentLink.classList.add('active');
+            currentFooterLink.classList.add('active');
+         }
+      });
+   }
+
+   function addNavigationLinksLongerActiveClass(entries, longerSectionObserver) {
+      entries.forEach((entry) => {
+         if (entry.isIntersecting) {
+            let currentLink = document.querySelector(`#navbarList a[href='#${entries.target.id}']`);
+            let currentFooterLink = document.querySelector(`#footer-navigation-list a[href='#${entries.target.id}']`);
+
+            removeNavbarLinksActiveClass();
+            removeFooterNavLinksActiveClass();
+
+            currentLink.classList.add('active');
+            currentFooterLink.classList.add('active');
+         }
+      });
+   }
+
+   function removeNavbarLinksActiveClass() {
+      navbarLinks.forEach((item) => item.classList.remove('active'));
+   }
+
+   function removeFooterNavLinksActiveClass() {
+      footerLinks.forEach((item) => item.classList.remove('active'));
+   }*/
 });
 
 /*===============================================================
