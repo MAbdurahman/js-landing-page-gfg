@@ -444,7 +444,7 @@ document.addEventListener('DOMContentLoaded', () => {
          return false;
       }
       if (!email.match(emailPattern)) {
-         message = 'Please enter a valid email address!';
+         message = 'Enter a valid email address!';
          isEmailValid = false;
          getMessagePrompt(message, `${emailPrompt.id}`, alertColor);
          return false;
@@ -544,16 +544,16 @@ document.addEventListener('DOMContentLoaded', () => {
       const errors = [];
 
       if (!validateName()) {
-         errors.push('Enter a valid first and last name.');
+         errors.push('Enter a valid first and last name!');
       }
 
       if (!validateEmail()) {
-         errors.push('Enter a valid email address.');
+         errors.push('Enter a valid email address!');
       }
 
       if (!validateMessage()) {
          errors.push(
-            `Your message must be between ${requiredMinLength} and ${requiredMaxLength} characters.`
+            `Enter a message between ${requiredMinLength} and ${requiredMaxLength} characters!`
          );
       }
 

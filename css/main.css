@@ -1046,7 +1046,7 @@ a[class^='cta-button']:hover::before {
 
 .header-paragraph {
    font-size: 1.25rem;
-   font-weight: 400;
+   font-weight: 500;
    line-height: 1.5;
    color: var(--color-augmented-800);
    text-align: center;
@@ -1106,9 +1106,9 @@ a[class^='cta-button']:hover::before {
    align-items: center;
    justify-content: center;
    font-size: 1rem;
-   font-weight: 400;
+   font-weight: 500;
    line-height: 1.5;
-   color: var(--color-augmented-800);
+   color: var(--color-augmented-900);
 }
 
 .about-section-content {
@@ -1246,9 +1246,9 @@ a[class^='cta-button']:hover::before {
    align-items: center;
    justify-content: center;
    font-size: 1rem;
-   font-weight: 400;
+   font-weight: 500;
    line-height: 1.5;
-   color: var(--color-augmented-800);
+   color: var(--color-augmented-900);
 
 }
 
@@ -1371,9 +1371,9 @@ a[class^='cta-button']:hover::before {
    align-items: center;
    justify-content: center;
    font-size: 1rem;
-   font-weight: 400;
+   font-weight: 500;
    line-height: 1.5;
-   color: var(--color-augmented-800);
+   color: var(--color-augmented-900);
 }
 
 .services-section-content {
@@ -1499,9 +1499,9 @@ a[class^='cta-button']:hover::before {
    align-items: center;
    justify-content: center;
    font-size: 1rem;
-   font-weight: 400;
+   font-weight: 500;
    line-height: 1.5;
-   color: var(--color-augmented-800);
+   color: var(--color-augmented-900);
 }
 
 .our-process-timeline {
@@ -1625,9 +1625,9 @@ a[class^='cta-button']:hover::before {
    align-items: center;
    justify-content: center;
    font-size: 1rem;
-   font-weight: 400;
+   font-weight: 500;
    line-height: 1.5;
-   color: var(--color-augmented-800);
+   color: var(--color-augmented-900);
 }
 
 .faq-list {
@@ -1736,7 +1736,7 @@ a[class^='cta-button']:hover::before {
    font-size: 1rem;
    font-weight: 500;
    line-height: 1.5;
-   color: var(--color-neutral-900);
+   color: var(--color-augmented-900);
 }
 
 .testimonial-slider {
@@ -1923,9 +1923,9 @@ a[class^='cta-button']:hover::before {
    align-items: center;
    justify-content: center;
    font-size: 1rem;
-   font-weight: 400;
+   font-weight: 500;
    line-height: 1.5;
-   color: var(--color-augmented-800);
+   color: var(--color-augmented-900);
    hyphens: auto;
 
 }
@@ -2313,6 +2313,7 @@ textarea.has-content ~ label {
 
 .mission-statement-paragraph {
    font-weight: 500;
+   hyphens: auto;
 }
 
 .footer-navigation-list,
@@ -2325,38 +2326,46 @@ textarea.has-content ~ label {
 }
 
 .footer-navigation-link,
-.footer-contact-link{
+.footer-contact-link,
+.footer-social-link {
    font-weight: 500;
    text-transform: capitalize;
    color: var(--color-neutral-000);
 }
 
-.footer-contact-link {
+.footer-contact-link,
+.footer-social-link {
    display: flex;
    align-items: center;
    justify-content: center;
-   gap: 0.5em;
+   gap: 0.25em;
 }
 
-.footer-contact-link i.fa-solid {
+.footer-contact-link i.fa-solid,
+.footer-social-link i.fa-brands {
    font-size: 1rem;
 }
 
 .footer-social-list {
    display: flex;
-   flex-direction: row;
+   flex-direction: column;
    align-items: center;
-   justify-content: space-evenly;
-   gap: 1em;
+   justify-content: center;
+   gap: 0.7em;
 }
-.footer-social-link {
-   font-size: 1.2rem;
-   color: var(--color-neutral-300);
+/*.footer-social-link {
+   !*font-size: 1.2rem;*!
+   font-weight: 500;
+   color: var(--color-neutral-200);
 
+}*/
+
+.footer-social-link i.fa-brands {
+   font-size: 1rem;
 }
-.footer-social-link:not(:last-child) {
+/*.footer-social-link:not(:last-child) {
    margin-right: 2rem;
-}
+}*/
 
 .footer-bottom {
    display: flex;
@@ -2371,8 +2380,9 @@ a.footer-bottom-color{
 
 @media screen and (max-width: 850px) {
    .footer-grid {
-      grid-template-columns: repeat(2, 1fr);
-      /*grid-template-columns: 66.667% 33.333%;*/
+      /*grid-template-columns: repeat(2, 1fr);*/
+      grid-template-columns: 66.667% 33.333%;
+      gap: 1.5rem;
    }
 }
 
