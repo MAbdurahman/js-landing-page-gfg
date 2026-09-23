@@ -135,18 +135,22 @@ document.addEventListener('DOMContentLoaded', function () {
          servicesLink.classList.add('active');
       });*/
 
+   if (window.innerWidth <= menuToggleBreakPoint) {
 
-   menuButton.addEventListener('click', function () {
-      this.classList.toggle('is-open');
-      navbarList.classList.toggle('is-open');
+      menuButton.addEventListener('click', function () {
+         this.classList.toggle('is-open');
+         navbarList.classList.toggle('is-open');
 
-   });
+      });
 
-   navbarList.addEventListener('click', function () {
-      this.classList.toggle('is-open');
-      menuButton.classList.toggle('is-open');
+      navbarList.addEventListener('click', function () {
+         this.classList.toggle('is-open');
+         menuButton.classList.toggle('is-open');
 
-   });
+      });
+
+   }
+
 
    /*   navLinks.forEach(link => {
          link.addEventListener('click', function () {
@@ -177,6 +181,8 @@ document.addEventListener('DOMContentLoaded', function () {
          menuButton.classList.remove('is-open');
       }
    });
+
+
 
    /*learnMoreLink.addEventListener('click', function () {
       navLinks.forEach((item) => item.classList.remove('active'));

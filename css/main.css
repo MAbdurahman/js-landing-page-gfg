@@ -473,7 +473,7 @@ img {
 ==================================================================*/
 
 /************************* primary-button styles *************************/
-button[class^='primary-button'],
+/*button[class^='primary-button'],
 a[class^='primary-button'] {
    position: relative;
    min-width: 120px;
@@ -490,7 +490,7 @@ a[class^='primary-button'] {
    color: var(--color-neutral-200);
    background-color: var(--color-primary-900);
    border: 2px solid var(--color-primary-900);
-   border-radius: var(--br-border-radius-300); /* border-radius: 5px */
+   border-radius: var(--br-border-radius-300); !* border-radius: 5px *!
    cursor: pointer;
    transition: background-color 0.3s, color 0.3s, opacity 0.3s;
    -webkit-transition: background-color 0.3s, color 0.3s, opacity 0.3s;
@@ -503,10 +503,47 @@ a[class^='primary-button']:hover,
 a[class^='primary-button']:focus {
    background-color: var(--color-primary-800);
    color: var(--color-neutral-100);
+}*/
+
+button[class^='primary-button'],
+a[class^='primary-button'] {
+   position: relative;
+   min-width: 120px;
+   /*height: 48px;*/
+   padding: 16px 32px;
+   font-family: var(--font-body), sans-serif;
+   font-size: medium;
+   font-weight: 700;
+   text-transform: capitalize;
+   letter-spacing: 1px;
+   color: var(--color-neutral-100);
+   background: linear-gradient(90deg, var(--color-primary-700) 0%, var(--color-primary-700) 50%, var(--color-primary-900) 50%, var(--color-primary-900) 100%);
+   background-repeat: no-repeat;
+   background-size: 200% 100%;
+   background-position: right bottom;
+   border-radius: 5px;
+   border: 2px solid var(--color-primary-900);
+   cursor: pointer;
+   outline: none;
+   box-shadow: var(--bs-box-shadow-bottom-right-100);
+   transition: background-position 0.25s var(--tf-ease-in-out), color 0.5s var(--tf-ease-in-out);
+}
+
+button[class^='primary-button']:hover,
+button[class^='primary-button']:focus,
+a[class^='primary-button']:hover,
+a[class^='primary-button']:focus {
+   cursor: pointer;
+   color: var(--color-neutral-000);
+}
+
+button[class^='primary-button']:hover,
+a[class^='primary-button']:hover {
+   background-position: left bottom;
 }
 
 /************************ secondary-button styles ************************/
-button[class^='outline-button'],
+/*button[class^='outline-button'],
 a[class^='outline-button'] {
    position: relative;
    min-width: 120px;
@@ -523,7 +560,7 @@ a[class^='outline-button'] {
    color: var(--color-primary-900);
    background-color: transparent;
    border: 2px solid var(--color-primary-900);
-   border-radius: var(--br-border-radius-300); /* border-radius: 5px */
+   border-radius: var(--br-border-radius-300); !* border-radius: 5px *!
    cursor: pointer;
    transition: background-color 0.3s, color 0.3s, opacity 0.3s;
    -webkit-transition: background-color 0.3s, color 0.3s, opacity 0.3s;
@@ -535,6 +572,43 @@ a[class^='outline-button']:hover,
 a[class^='outline-button']:focus {
    background-color: var(--color-primary-900);
    color: var(--color-neutral-100);
+}*/
+
+button[class^='outline-button'],
+a[class^='outline-button'] {
+   position: relative;
+   min-width: 120px;
+   /*height: 48px;*/
+   padding: 16px 32px;
+   font-family: var(--font-body), sans-serif;
+   font-size: medium;
+   font-weight: 700;
+   text-transform: capitalize;
+   letter-spacing: 1px;
+   color: var(--color-primary-900);
+   background: linear-gradient(90deg, var(--color-primary-700) 0%, var(--color-primary-700) 50%, transparent 50%, transparent 100%);
+   background-repeat: no-repeat;
+   background-size: 200% 100%;
+   background-position: right bottom;
+   border-radius: 5px;
+   border: 2px solid var(--color-primary-900);
+   cursor: pointer;
+   outline: none;
+   box-shadow: var(--bs-box-shadow-bottom-right-100);
+   transition: background-position 0.25s var(--tf-ease-in-out), color 0.5s var(--tf-ease-in-out);
+}
+
+button[class^='outline-button']:hover,
+button[class^='outline-button']:focus,
+a[class^='outline-button']:hover,
+a[class^='outline-button']:focus {
+   cursor: pointer;
+   color: var(--color-neutral-000);
+}
+
+button[class^='outline-button']:hover,
+a[class^='outline-button']:hover {
+   background-position: left bottom;
 }
 
 button[class='pause-button'] {
@@ -646,7 +720,10 @@ button[aria-pressed='true'] {
 
 .navbar-list-link:hover,
 .navbar-list-link:focus,
-.navbar-list-link:active {
+.navbar-list-link:active,
+.footer-navigation-link:hover,
+.footer-navigation-link:focus,
+.footer-navigation-link:active {
    color: var(--color-primary-600);
 }
 
@@ -950,7 +1027,7 @@ a[class^='cta-button']:hover::before {
    flex-direction: column;
    align-items: center;
    justify-content: center;
-   padding: 120px 0;
+   padding: 40px 0;
    background-color: var(--color-neutral-000);
 }
 
@@ -960,7 +1037,7 @@ a[class^='cta-button']:hover::before {
    flex-direction: column;
    align-items: center;
    justify-content: center;
-   padding: 120px 0;
+   padding: 40px 0;
    background-color: var(--color-neutral-100);
 }
 
@@ -970,7 +1047,7 @@ a[class^='cta-button']:hover::before {
    flex-direction: column;
    align-items: center;
    justify-content: center;
-   padding: 120px 0 100px;
+   padding: 40px 0 100px;
    background-color: var(--color-neutral-000);
 }
 .section-four {
@@ -979,7 +1056,7 @@ a[class^='cta-button']:hover::before {
    flex-direction: column;
    align-items: center;
    justify-content: center;
-   padding: 120px 0;
+   padding: 40px 0;
    background-color: var(--color-neutral-300);
 }
 
@@ -989,7 +1066,7 @@ a[class^='cta-button']:hover::before {
    flex-direction: column;
    align-items: center;
    justify-content: center;
-   padding: 120px 0;
+   padding: 40px 0;
    background-color: var(--color-neutral-100);
 }
 
@@ -2066,7 +2143,7 @@ textarea.has-content ~ label {
    padding: 16px 32px;
    font-family: var(--font-body), sans-serif;
    font-size: medium;
-   font-weight: 600;
+   font-weight: 700;
    text-transform: uppercase;
    letter-spacing: 1px;
    color: var(--color-neutral-100);
@@ -2078,7 +2155,7 @@ textarea.has-content ~ label {
    border: 1px solid var(--color-primary-900);
    cursor: pointer;
    outline: none;
-   box-shadow: 5px 3px 21px -1px rgba(34, 40, 45, 0.25), 5px 3px 21px -1px rgba(34, 40, 45, 0.25);
+   box-shadow: var(--bs-box-shadow-bottom-right-100);
    transition: background-position 0.25s var(--tf-ease-in-out), color 0.5s var(--tf-ease-in-out);
 }
 
