@@ -512,7 +512,7 @@ a[class^='primary-button'] {
    /*height: 48px;*/
    padding: 16px 32px;
    font-family: var(--font-body), sans-serif;
-   font-size: medium;
+   font-size: 1rem;
    font-weight: 700;
    text-transform: capitalize;
    letter-spacing: 1px;
@@ -581,7 +581,7 @@ a[class^='outline-button'] {
    /*height: 48px;*/
    padding: 16px 32px;
    font-family: var(--font-body), sans-serif;
-   font-size: medium;
+   font-size: 1rem;
    font-weight: 700;
    text-transform: capitalize;
    letter-spacing: 1px;
