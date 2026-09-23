@@ -39,8 +39,6 @@ document.addEventListener('DOMContentLoaded', function () {
    const menuButton = document.getElementById('menuButton');
    const navbarList = document.getElementById('navbarList');
    const navbar = document.getElementById('navbar');
-   /*const navLinks = document.querySelectorAll('.navbar-list-link');
-   const footerLinks = document.querySelectorAll('.footer-navigation-link');*/
    const navbarLogo = document.getElementById('navbar-logo-brand');
    const homeLink = document.getElementById('navbar-home-link');
    const aboutLink = document.getElementById('navbar-about-link');

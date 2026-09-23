@@ -2452,12 +2452,6 @@ textarea.has-content ~ label {
    color: var(--color-augmented-300);
 }
 
-/*.footer-contact-link:hover,
-.footer-social-link:hover {
-   transform: scale(1.05);
-}*/
-
-
 .footer-social-list {
    display: flex;
    flex-direction: column;
@@ -2465,19 +2459,10 @@ textarea.has-content ~ label {
    justify-content: center;
    gap: 0.7em;
 }
-/*.footer-social-link {
-   !*font-size: 1.2rem;*!
-   font-weight: 500;
-   color: var(--color-neutral-200);
-
-}*/
 
 .footer-social-link i.fa-brands {
    font-size: 1rem;
 }
-/*.footer-social-link:not(:last-child) {
-   margin-right: 2rem;
-}*/
 
 .footer-bottom {
    display: flex;
@@ -2529,26 +2514,6 @@ a.footer-bottom-color{
 /*===============================================================
            keyframes
 ==================================================================*/
-/*
-@keyframes scroll-left {
-   from {
-      transform: translateX(0);
-   }
-   to {
-      transform: translateX(-50%);
-   }
-}
-
-@keyframes scroll-right {
-   from {
-      transform: translateX(-50%);
-   }
-   to {
-      transform: translateX(0);
-   }
-}*/
-
-
 @keyframes scroll-left {
    to {
       transform: translate3d(-50%, 0, 0);
@@ -2563,14 +2528,3 @@ a.footer-bottom-color{
       transform: translate3d(0, 0, 0);
    }
 }
-
-/*
-@keyframes scroll-left {
-   from { transform: translate3d(0, 0, 0); }
-   to   { transform: translate3d(-2720px, 0, 0); }
-}
-
-@keyframes scroll-right {
-   from { transform: translate3d(-2720px, 0, 0); }
-   to   { transform: translate3d(0, 0, 0); }
-}*/
