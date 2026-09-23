@@ -2386,6 +2386,7 @@ textarea.has-content ~ label {
    font-size: 1rem;
    font-weight: 900;
    text-align: center;
+   letter-spacing: var(--ls-letter-spacing-100);
    margin: 1em 0 0.5em;
 }
 
@@ -2411,14 +2412,6 @@ textarea.has-content ~ label {
    color: var(--color-neutral-000);
 }
 
-.footer-contact-link,
-.footer-social-link {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   gap: 0.25em;
-}
-
 .footer-navigation-link {
    font-weight: 700;
    text-transform: capitalize;
@@ -2442,6 +2435,28 @@ textarea.has-content ~ label {
 .footer-social-link i.fa-brands {
    font-size: 1rem;
 }
+
+.footer-contact-link,
+.footer-social-link {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 0.25em;
+   transition: color 0.5s, transform 0.5s;
+}
+
+.footer-contact-link:hover,
+.footer-contact-link:focus,
+.footer-social-link:hover,
+.footer-social-link:focus {
+   color: var(--color-augmented-300);
+}
+
+/*.footer-contact-link:hover,
+.footer-social-link:hover {
+   transform: scale(1.05);
+}*/
+
 
 .footer-social-list {
    display: flex;
@@ -2473,6 +2488,12 @@ textarea.has-content ~ label {
 a.footer-bottom-color{
    font-size: 0.75rem;
    color: var(--color-neutral-500);
+   transition: color 0.5s, transform 0.5s;
+}
+.terms-conditions:hover,
+.privacy:hover {
+   color: var(--color-augmented-100);
+   transform: scale(1.1);
 }
 
 @media screen and (max-width: 850px) {
