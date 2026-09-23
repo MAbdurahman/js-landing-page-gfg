@@ -2080,11 +2080,12 @@ a[class^='cta-button']:hover::before {
 
 .utils-effect-07 ~ .focus-background-07 {
    position: absolute;
-   bottom: 0;
+   bottom: -16px;
    left: 0;
    width: 0;
    height: 100%;
    z-index: -1;
+   display: none;
    background-color: var(--color-neutral-200);
    transition: 0.4s;
 }
