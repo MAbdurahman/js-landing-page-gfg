@@ -1077,7 +1077,7 @@ a[class^='cta-button']:hover::before {
    align-items: center;
    justify-content: center;
    background-color: var(--color-neutral-700);
-   color: var(--color-neutral-100);
+   color: var(--color-neutral-200);
 }
 
 /*===============================================================
@@ -1233,13 +1233,9 @@ a[class^='cta-button']:hover::before {
    /*margin: 0 auto;*/ /* keeps it centered */
    max-width: 50ch; /* limits characters per line (roughly) */
    text-align: left; /* optional: center the text itself */
-   /*display: flex;*/
-   /*align-items: center;
-   justify-content: center;*/
-
    min-width: 100%;
    font-size: 1rem;
-   font-weight: 400;
+   font-weight: 500;
    line-height: 1.5;
    /*hyphens: auto;*/
    color: var(--color-augmented-800);
@@ -1528,6 +1524,7 @@ a[class^='cta-button']:hover::before {
    margin: 0;
    color: var(--color-neutral-600);
    font-size: 0.95rem;
+   font-weight: 500;
    line-height: 1.7;
 }
 
@@ -1640,6 +1637,7 @@ a[class^='cta-button']:hover::before {
 .our-process-card-body {
    margin: 0;
    font-size: 0.96rem;
+   font-weight: 500;
    /*line-height: 1.8;*/
    color: var(--color-neutral-800);
 
@@ -1763,6 +1761,7 @@ a[class^='cta-button']:hover::before {
    padding: 0 24px 22px;
    color: var(--color-augmented-800);
    font-size: 0.95rem;
+   font-weight: 500;
    line-height: 1.75;
 }
 
@@ -2410,7 +2409,7 @@ textarea.has-content ~ label {
 .footer-social-link {
    font-weight: 500;
    text-transform: capitalize;
-   color: var(--color-neutral-000);
+   color: var(--color-neutral-200);
 }
 
 .footer-navigation-link {
