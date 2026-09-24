@@ -34,8 +34,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
    console.log('DOMContentLoaded has loaded!');
 
+   const root = document.documentElement;
    const lightDarkButton = document.getElementById('lightDarkButton');
    const icon = document.getElementById('lightDarkIcon');
+   const saveTheme = localStorage.getItem('agency-theme');
    const menuButton = document.getElementById('menuButton');
    const navbarList = document.getElementById('navbarList');
    const navbar = document.getElementById('navbar');
@@ -114,8 +116,25 @@ document.addEventListener('DOMContentLoaded', function () {
    let isPaused = false;
 
 
+
+   /************************* light/dark theme *************************/
+   if (saveTheme) {
+      root.setAttribute('data-theme', saveTheme);
+   }
+
    lightDarkButton.addEventListener('click', function () {
       icon.src = icon.src.includes('moon') ? './assets/img/theme/sun.png' : './assets/img/theme/moon.png';
+      const currentTheme = root.getAttribute('data-theme');
+      const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+      if (nextTheme === 'light') {
+         root.removeAttribute('data-theme');
+         localStorage.setItem('agency-theme', 'light');
+
+      } else {
+         root.setAttribute('data-theme', 'dark');
+         localStorage.setItem('agency-theme', 'dark');
+      }
    });
 
    /*   ctaButton.addEventListener('click', function () {
