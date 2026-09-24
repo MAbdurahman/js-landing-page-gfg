@@ -1,5 +1,5 @@
 # js-landing-page-gfg
-<p>A modern, responsive web development landing page built with HTML5, CSS3, and vanilla JavaScript.</p>
+#### <p>A responsive, SEO-friendly landing page for a web development agency built with **HTML5, CSS3, and vanilla JavaScript**. Features smooth scroll navigation with scroll-spy, animated floating-label inputs, draggable testimonial and marquee logo sliders, toast notifications, and modern CSS Grid/Flexbox layouts.</p>
 
 ## Features
 - [x] Responsive design for various screen sizes
