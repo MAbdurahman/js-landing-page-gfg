@@ -65,7 +65,6 @@
    --color-primary-800: hsl(277, 77%, 45%);
    --color-primary-900: hsl(277, 77%, 35%);
    --color-primary-900a: #69159e;
-   --color-primary-900-footer: hsl(257, 40%, 14%);
    /* neutral colors */
    --color-neutral-000: hsl(277, 0%, 98%);
    --color-neutral-100: hsl(277, 0%, 88%);
@@ -132,7 +131,7 @@
    --tf-ease-snappy-02: cubic-bezier(.17, .67, .83, .67);
 
    /**************** radius ****************/
-   --radius-000: 1px;
+   /*--radius-000: 1px;
    --radius-100: 2px;
    --radius-200: 3px;
    --radius-300: 5px;
@@ -141,7 +140,7 @@
    --radius-600: 21px;
    --radius-700: 34px;
    --radius-800: 55px;
-   --radius-900: 50%;
+   --radius-900: 50%;*/
 
    /************************* border-radius *************************/
    --br-border-radius-000: 1px;
@@ -265,6 +264,117 @@
    --breakpoint-2xl: 96rem; /*1536px;*/
    --breakpoint-3xl: 120rem; /*1920px;*/
 
+
+   --bodyTextColor: var(--color-neutral-900);
+   --bodyBackgroundColor: var(--color-augmented-000);
+
+   --navbarBackgroundColor: var(--color-neutral-100);
+
+
+   --navbarListBackgroundColor: var(--color-neutral-100);
+   --navbarListLinkColor: var(--color-neutral-600);
+
+   --menuButtonBarColor: var(--color-neutral-800);
+
+   --sectionOneBackgroundColor: var(--color-neutral-000);
+   --sectionTwoBackgroundColor: var(--color-neutral-100);
+   --sectionThreeBackgroundColor: var(--color-neutral-000);
+   --sectionFourBackgroundColor: var(--color-neutral-300);
+   --sectionFiveBackgroundColor: var(--color-neutral-100);
+   --footerBackgroundColor: var(--color-augmented-900);
+
+   --navbarLogoBrandColor: var(--color-augmented-900);
+   --aboutLogoBrandColor: var(--color-augmented-900);
+   --headerTitleColor: var(--color-augmented-900);
+   --headerParagraphColor: var(--color-augmented-800);
+
+   --aboutParagraphColor: var(--color-augmented-900);
+   --aboutTextColor: var(--color-augmented-800);
+   --subSectionLogoParagraphColor: var(--color-augmented-900);
+   --marqueeSliderColor: var(--color-neutral-000);
+
+   --serviceParagraphColor: var(--color-augmented-900);
+
+   --serviceSectionCardBackgroundColor: var(--color-neutral-100);
+   --serviceSectionCardBorderColor: var(--color-neutral-200);
+   --serviceCardCaptionColor: var(--color-neutral-600);
+
+   --ourProcessSectionParagraphColor: var(--color-augmented-900);
+   --ourProcessTimelineBackgrondColor: var(--color-neutral-900);
+   --ourProcessNumberBackgroundColor: var(--color-neutral-000);
+
+   --ourProcessCardBackgroundColor: var(--color-neutral-000);
+   --ourProcessCardBodyText: var(--color-neutral-800);
+
+   --faqSectionParagraphColor: var(--color-augmented-900);
+   --faqItemBackgroundColor: var(--color-neutral-000);
+
+   --faqQuestionColor: var(--color-neutral-800);
+   --faqAnswerColor: var(--color-augmented-800);
+
+   --testimonialParagraphColor: var(--color-augmented-900);
+   --testimonialCardBackgroundColor: var(--color-neutral-100);
+   --testimonialCardText: var(--color-neutral-900);
+
+   --contactParagraphColor: var(--color-augmented-900);
+   --contactFormLabelColor: var(--color-neutral-800);
+
+}
+
+[data-theme='dark'] {
+   --bodyTextColor: var(--color-augmented-000);
+   --bodyBackgroundColor: var(--color-neutral-900);
+
+   --navbarBackgroundColor: var(--color-neutral-800);
+
+   --navbarListBackgroundColor: var(--color-neutral-800);
+   --navbarListLinkColor: var(--color-neutral-300);
+
+   --menuButtonBarColor: var(--color-neutral-100);
+
+   --sectionOneBackgroundColor: var(--color-neutral-900);
+   --sectionTwoBackgroundColor: var(--color-neutral-800);
+   --sectionThreeBackgroundColor: var(--color-neutral-900);
+   --sectionFourBackgroundColor: var(--color-neutral-600);
+   --sectionFiveBackgroundColor: var(--color-neutral-400);
+   --footerBackgroundColor: var(--color-neutral-900);
+
+   --navbarLogoBrandColor: var(--color-augmented-000);
+   --aboutLogoBrandColor: var(--color-augmented-000);
+   --headerTitleColor: var(--color-augmented-000);
+   --headerParagraphColor: var(--color-augmented-100);
+   --aboutParagraphColor: var(--color-augmented-000);
+   --aboutTextColor: var(--color-augmented-100);
+
+   --subSectionLogoParagraphColor: var(--color-augmented-000);
+   --marqueeSliderColor: var(--color-neutral-300);
+
+   --serviceParagraphColor: var(--color-augmented-000);
+
+   --serviceSectionCardBackgroundColor: var(--color-neutral-800);
+   --serviceSectionCardBorderColor: var(--color-neutral-700);
+   --serviceCardCaptionColor: var(--color-neutral-300);
+
+   --ourProcessSectionParagraphColor: var(--color-augmented-000);
+   --ourProcessTimelineBackgrondColor: var(--color-neutral-000);
+   --ourProcessNumberBackgroundColor: var(--color-neutral-900);
+
+   --ourProcessCardBackgroundColor: var(--color-neutral-800);
+   --ourProcessCardBodyText: var(--color-neutral-100);
+
+   --faqSectionParagraphColor: var(--color-augmented-000);
+   --faqItemBackgroundColor: var(--color-neutral-800);
+
+   --faqQuestionColor: var(--color-neutral-100);
+   --faqAnswerColor: var(--color-augmented-100);
+
+   --testimonialParagraphColor: var(--color-augmented-000);
+   --testimonialCardBackgroundColor: var(--color-neutral-700);
+   --testimonialCardTextColor: var(--color-neutral-000);
+
+   --contactParagraphColor: var(--color-augmented-000);
+   --contactFormLabelColor: var(--color-neutral-100);
+
 }
 
 html {
@@ -301,8 +411,8 @@ body {
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
    line-height: 1.5;
-   color: var(--color-neutral-900);
-   background-color: var(--color-augmented-000);
+   color: var(--bodyTextColor);
+   background-color: var(--bodyBackgroundColor);
 }
 
 /*===============================================================
@@ -315,6 +425,7 @@ h1, h2, h3, h4, h5, h6 {
    font-optical-sizing: auto;
    text-rendering: optimizeLegibility;
    line-height: 1.3;
+
 }
 
 h1 {
@@ -439,7 +550,7 @@ img {
    justify-content: center;
    scrollbar-width: none;
    -ms-overflow-style: none;
-   background: var(--color-augmented-000);
+   background: var(--bodyBackgroundColor);
 
 }
 
@@ -473,38 +584,7 @@ img {
 ==================================================================*/
 
 /************************* primary-button styles *************************/
-/*button[class^='primary-button'],
-a[class^='primary-button'] {
-   position: relative;
-   min-width: 120px;
-   height: 48px;
-   z-index: 1;
-   overflow: hidden;
-   margin-top: 4px;
-   padding: 8px 16px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   font-weight: 700;
-   letter-spacing: 1px;
-   color: var(--color-neutral-200);
-   background-color: var(--color-primary-900);
-   border: 2px solid var(--color-primary-900);
-   border-radius: var(--br-border-radius-300); !* border-radius: 5px *!
-   cursor: pointer;
-   transition: background-color 0.3s, color 0.3s, opacity 0.3s;
-   -webkit-transition: background-color 0.3s, color 0.3s, opacity 0.3s;
-
-}
-
-button[class^='primary-button']:hover,
-button[class^='primary-button']:focus,
-a[class^='primary-button']:hover,
-a[class^='primary-button']:focus {
-   background-color: var(--color-primary-800);
-   color: var(--color-neutral-100);
-}*/
-
+/*noinspection ALL*/
 button[class^='primary-button'],
 a[class^='primary-button'] {
    position: relative;
@@ -542,43 +622,12 @@ a[class^='primary-button']:hover {
    background-position: left bottom;
 }
 
-/************************ secondary-button styles ************************/
-/*button[class^='outline-button'],
-a[class^='outline-button'] {
-   position: relative;
-   min-width: 120px;
-   height: 48px;
-   z-index: 1;
-   overflow: hidden;
-   margin-top: 4px;
-   padding: 8px 16px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   font-weight: 700;
-   letter-spacing: 1px;
-   color: var(--color-primary-900);
-   background-color: transparent;
-   border: 2px solid var(--color-primary-900);
-   border-radius: var(--br-border-radius-300); !* border-radius: 5px *!
-   cursor: pointer;
-   transition: background-color 0.3s, color 0.3s, opacity 0.3s;
-   -webkit-transition: background-color 0.3s, color 0.3s, opacity 0.3s;
-}
-
-button[class^='outline-button']:hover,
-button[class^='outline-button']:focus,
-a[class^='outline-button']:hover,
-a[class^='outline-button']:focus {
-   background-color: var(--color-primary-900);
-   color: var(--color-neutral-100);
-}*/
-
+/************************ outline-button styles ************************/
+/*noinspection ALL*/
 button[class^='outline-button'],
 a[class^='outline-button'] {
    position: relative;
    min-width: 120px;
-   /*height: 48px;*/
    padding: 16px 32px;
    font-family: var(--font-body), sans-serif;
    font-size: 1rem;
@@ -622,7 +671,6 @@ button[class='pause-button'] {
    display: flex;
    align-items: center;
    justify-content: center;
-   /*font-size: 0.8rem;*/
    font-size: 1rem;
    font-weight: 700;
    text-align: center;
@@ -645,13 +693,12 @@ button[aria-pressed='true'] {
 /*===============================================================
           navigation
 ==================================================================*/
-
 .navbar {
    position: fixed;
    width: 100%;
    z-index: 999;
-   background-color: var(--color-neutral-100);
-   border-bottom: 2px solid hsla(277 0% 28% / 0.3);
+   background-color: var(--navbarBackgroundColor);
+   border-bottom: 3px solid hsla(277 0% 28% / 0.5);
    box-shadow: 0 4px 6px -4px hsla(277 0% 10% / 0.5);
 }
 
@@ -668,21 +715,13 @@ button[aria-pressed='true'] {
 .navbar-logo-brand {
    font-size: 1.25rem;
    font-weight: 900;
-   color: var(--color-neutral-700);
-   line-height: 1.5rem;
-}
-
-.navbar-logo-brand-dark {
-   font-size: 1.25rem;
-   font-weight: 900;
-   color: var(--color-neutral-000);
+   color: var(--navbarLogoBrandColor);
    line-height: 1.5rem;
 }
 
 .logo-brand-color {
    color: var(--color-primary-900);
 }
-
 
 .navbar-list {
    position: fixed;
@@ -697,8 +736,7 @@ button[aria-pressed='true'] {
    justify-content: center;
    gap: 2rem;
    padding: 2em;
-   background-color: var(--color-neutral-100);
-   /*border-top: 2px solid var(--color-neutral-600);*/
+   background-color: var(--navbarListBackgroundColor);
    transition: transform 0.5s, opacity 0.125s;
 
 }
@@ -712,7 +750,7 @@ button[aria-pressed='true'] {
    font-size: 1rem;
    font-weight: 700;
    text-transform: capitalize;
-   color: var(--color-neutral-600);
+   color: var(--navbarListLinkColor);
    white-space: nowrap;
    cursor: pointer;
    transition: color 0.5s, transform 0.5s;
@@ -773,7 +811,7 @@ button[class='nav-theme-button'] {
    display: block;
    width: 40%;
    height: 4px;
-   background-color: var(--color-neutral-800);
+   background-color: var(--menuButtonBarColor);
    border-radius: var(--br-border-radius-300);
 }
 
@@ -1028,7 +1066,7 @@ a[class^='cta-button']:hover::before {
    align-items: center;
    justify-content: center;
    padding: 40px 0;
-   background-color: var(--color-neutral-000);
+   background-color: var(--sectionOneBackgroundColor);
 }
 
 .section-two {
@@ -1038,7 +1076,7 @@ a[class^='cta-button']:hover::before {
    align-items: center;
    justify-content: center;
    padding: 40px 0;
-   background-color: var(--color-neutral-100);
+   background-color: var(--sectionTwoBackgroundColor);
 }
 
 .section-three {
@@ -1048,7 +1086,7 @@ a[class^='cta-button']:hover::before {
    align-items: center;
    justify-content: center;
    padding: 40px 0 100px;
-   background-color: var(--color-neutral-000);
+   background-color: var(--sectionThreeBackgroundColor);
 }
 .section-four {
    scroll-margin-top: 80px;
@@ -1057,7 +1095,7 @@ a[class^='cta-button']:hover::before {
    align-items: center;
    justify-content: center;
    padding: 40px 0;
-   background-color: var(--color-neutral-300);
+   background-color: var(--sectionFourBackgroundColor);
 }
 
 .section-five {
@@ -1067,7 +1105,7 @@ a[class^='cta-button']:hover::before {
    align-items: center;
    justify-content: center;
    padding: 40px 0;
-   background-color: var(--color-neutral-100);
+   background-color: var(--sectionFiveBackgroundColor);
 }
 
 
@@ -1076,7 +1114,8 @@ a[class^='cta-button']:hover::before {
    flex-direction: row;
    align-items: center;
    justify-content: center;
-   background-color: var(--color-neutral-700);
+   /*background-color: var(--color-neutral-700);*/
+   background-color: var(--footerBackgroundColor);
    color: var(--color-neutral-200);
 }
 
@@ -1102,7 +1141,7 @@ a[class^='cta-button']:hover::before {
    font-weight: 900;
    line-height: 1;
    text-align: center;
-   color: var(--color-augmented-900);
+   color: var(--headerTitleColor);
 }
 
 .brand-color {
@@ -1124,7 +1163,7 @@ a[class^='cta-button']:hover::before {
    font-size: 1.25rem;
    font-weight: 500;
    line-height: 1.5;
-   color: var(--color-augmented-800);
+   color: var(--headerParagraphColor);
    text-align: center;
 
 }
@@ -1184,7 +1223,7 @@ a[class^='cta-button']:hover::before {
    font-size: 1rem;
    font-weight: 500;
    line-height: 1.5;
-   color: var(--color-augmented-900);
+   color: var(--aboutParagraphColor);
 }
 
 .about-section-content {
@@ -1220,7 +1259,7 @@ a[class^='cta-button']:hover::before {
 .about-logo-brand {
    font-size: 1rem;
    font-weight: 900;
-   color: var(--color-neutral-700);
+   color: var(--aboutLogoBrandColor);
 }
 
 .about-brand-color {
@@ -1238,7 +1277,7 @@ a[class^='cta-button']:hover::before {
    font-weight: 500;
    line-height: 1.5;
    /*hyphens: auto;*/
-   color: var(--color-augmented-800);
+   color: var(--aboutTextColor);
 }
 
 .about-text:not(:last-child) {
@@ -1320,7 +1359,7 @@ a[class^='cta-button']:hover::before {
    font-size: 1rem;
    font-weight: 500;
    line-height: 1.5;
-   color: var(--color-augmented-900);
+   color: var(--subSectionLogoParagraphColor);
    hyphens: auto;
 
 }
@@ -1343,7 +1382,7 @@ a[class^='cta-button']:hover::before {
    border-radius: 0;
    padding: 14px 0;
    margin-bottom: 0.5em;
-   background-color: #fafafa;
+   background-color: var(--marqueeSliderColor);
    border-top: 2px solid var(--color-primary-900);
    border-bottom: 2px solid var(--color-primary-900);
 }
@@ -1362,12 +1401,12 @@ a[class^='cta-button']:hover::before {
 
 .marquee-slider::before {
    left: 0;
-   background: linear-gradient(to right, #fafafa, rgba(250, 250, 250, 0));
+   background: linear-gradient(to right, var(--marqueeSliderColor), rgba(250, 250, 250, 0));
 }
 
 .marquee-slider::after {
    right: 0;
-   background: linear-gradient(to left, #fafafa, rgba(250, 250, 250, 0));
+   background: linear-gradient(to left, var(--marqueeSliderColor), rgba(250, 250, 250, 0));
 }
 
 .marquee-track {
@@ -1446,7 +1485,7 @@ a[class^='cta-button']:hover::before {
    font-size: 1rem;
    font-weight: 500;
    line-height: 1.5;
-   color: var(--color-augmented-900);
+   color: var(--serviceParagraphColor);
 }
 
 .services-section-content {
@@ -1469,8 +1508,8 @@ a[class^='cta-button']:hover::before {
 
 .services-section-card {
    padding: 30px 24px;
-   background-color: var(--color-neutral-100);
-   border: 1px solid #e9eef5;
+   background-color: var(--serviceSectionCardBackgroundColor);
+   border: 2px solid var(--serviceSectionCardBorderColor);
    border-radius: var(--br-border-radius-300);
    box-shadow: var(--bs-box-shadow-bottom-right-100);
    transition: transform 0.3s var(--tf-ease),
@@ -1481,7 +1520,7 @@ a[class^='cta-button']:hover::before {
 
 .services-section-card:hover {
    transform: translateY(-8px);
-   border-color: #dbe7f5;
+   border-color: var(--color-primary-900);
    box-shadow: var(--bs-box-shadow-bottom-right-200);
 }
 
@@ -1493,7 +1532,6 @@ a[class^='cta-button']:hover::before {
    justify-content: center;
    margin-bottom: 18px;
    border-radius: var(--br-border-radius-400);
-   background: #f8fafc;
    background: var(--color-neutral-200);
    color: var(--color-augmented-900);
    transition: transform 0.35s var(--tf-ease),
@@ -1503,7 +1541,7 @@ a[class^='cta-button']:hover::before {
 
 .services-section-card:hover .services-card-icon {
    transform: scale(1.06);
-   background: rgba(37, 99, 235, 0.08);
+/*   background: rgba(37, 99, 235, 0.08);*/
    background: var(--color-primary-100);
    color: var(--color-augmented-900);
 }
@@ -1522,7 +1560,7 @@ a[class^='cta-button']:hover::before {
 
 .service-card-caption {
    margin: 0;
-   color: var(--color-neutral-600);
+   color: var(--serviceCardCaptionColor);
    font-size: 0.95rem;
    font-weight: 500;
    line-height: 1.7;
@@ -1575,7 +1613,7 @@ a[class^='cta-button']:hover::before {
    font-size: 1rem;
    font-weight: 500;
    line-height: 1.5;
-   color: var(--color-augmented-900);
+   color: var(--ourProcessSectionParagraphColor);
 }
 
 .our-process-timeline {
@@ -1592,8 +1630,8 @@ a[class^='cta-button']:hover::before {
    left: 28px;
    top: 8px;
    bottom: 8px;
-   width: 1px;
-   background: linear-gradient(to bottom, color-mix(in srgb, var(--color-neutral-900) 20%, transparent), transparent);
+   width: 2px;
+   background: linear-gradient(to bottom, color-mix(in srgb, var(--ourProcessTimelineBackgrondColor) 20%, transparent), transparent);
 }
 
 .our-process-step {
@@ -1610,9 +1648,10 @@ a[class^='cta-button']:hover::before {
    display: flex;
    align-items: center;
    justify-content: center;
-   border-radius: 999px;
-   background: #ffffff;
-   border: 2px solid rgba(15, 23, 42, 0.08);
+   background: var(--ourProcessNumberBackgroundColor);
+   border-radius: var(--br-border-radius-900);
+/*   border: 3px solid rgba(15, 23, 42, 0.08);*/
+   border: 3px solid var(--serviceSectionCardBorderColor);
    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
    font-size: 0.9rem;
    font-weight: 700;
@@ -1622,8 +1661,10 @@ a[class^='cta-button']:hover::before {
 
 .our-process-card {
    padding: 24px 20px;
-   background: color-mix(in srgb, #ffffff 92%, transparent);
-   border: 2px solid rgba(15, 23, 42, 0.08);
+   background: color-mix(in srgb, var(--ourProcessCardBackgroundColor) 92%, transparent);
+
+   /*border: 3px solid rgba(15, 23, 42, 0.08);*/
+   border: 3px solid var(--serviceSectionCardBorderColor);
    border-radius: var(--br-border-radius-400);
    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
 }
@@ -1639,7 +1680,7 @@ a[class^='cta-button']:hover::before {
    font-size: 0.96rem;
    font-weight: 500;
    /*line-height: 1.8;*/
-   color: var(--color-neutral-800);
+   color: var(--ourProcessCardBodyText);
 
 }
 
@@ -1702,7 +1743,7 @@ a[class^='cta-button']:hover::before {
    font-size: 1rem;
    font-weight: 500;
    line-height: 1.5;
-   color: var(--color-augmented-900);
+   color: var(--faqSectionParagraphColor);
 }
 
 .faq-list {
@@ -1713,9 +1754,10 @@ a[class^='cta-button']:hover::before {
 .faq-item {
    overflow: hidden;
    padding: 24px 20px;
-   background: color-mix(in srgb, #ffffff 92%, transparent);
-   border: 2px solid rgba(15, 23, 42, 0.08);
+   background: color-mix(in srgb, var(--faqItemBackgroundColor) 92%, transparent);
+   border: 3px solid rgba(15, 23, 42, 0.08);
    border-radius: var(--br-border-radius-400);
+   border: 3px solid var(--serviceSectionCardBorderColor);
    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
    transition: transform 0.35s var(--tf-ease),
    box-shadow 0.35s var(--tf-ease), border-color 0.35s var(--tf-ease);
@@ -1736,7 +1778,7 @@ a[class^='cta-button']:hover::before {
    padding: 22px 24px;
    border: 0;
    background: transparent;
-   color: var(--color-neutral-800);
+   color: var(--faqQuestionColor);
    text-align: left;
    cursor: pointer;
    font-weight: 600;
@@ -1759,7 +1801,7 @@ a[class^='cta-button']:hover::before {
 .faq-answer p {
    margin: 0;
    padding: 0 24px 22px;
-   color: var(--color-augmented-800);
+   color: var(--faqAnswerColor);
    font-size: 0.95rem;
    font-weight: 500;
    line-height: 1.75;
@@ -1812,7 +1854,7 @@ a[class^='cta-button']:hover::before {
    font-size: 1rem;
    font-weight: 500;
    line-height: 1.5;
-   color: var(--color-augmented-900);
+   color: var(--testimonialParagraphColor);
 }
 
 .testimonial-slider {
@@ -1852,7 +1894,7 @@ a[class^='cta-button']:hover::before {
 }
 
 .testimonial-card {
-   background-color: var(--color-neutral-100);
+   background-color: var(--testimonialCardBackgroundColor);
    border: 2px solid var(--color-primary-900);
    border-radius: var(--br-border-radius-400);
    box-shadow: var(--bs-box-shadow-bottom-right-100);
@@ -1873,6 +1915,8 @@ a[class^='cta-button']:hover::before {
    margin-bottom: 16px;
 }
 
+
+
 .avatar {
    width: 72px;
    height: 72px;
@@ -1883,14 +1927,15 @@ a[class^='cta-button']:hover::before {
 }
 
 .card-top h3 {
-   font-size: 1.05rem;
    margin-bottom: 4px;
+   font-size: 1.05rem;
+   color: var(--testimonialCardTextColor);
 }
 
 .card-top span {
-   color: var(--color-neutral-900);
    font-size: 0.92rem;
    font-weight: var(--font-weight-semibold);
+   color: var(--testimonialCardTextColor);
 }
 
 .stars {
@@ -1901,12 +1946,12 @@ a[class^='cta-button']:hover::before {
 }
 
 .testimonial-card p {
-   color: var(--color-neutral-900);
    line-height: 1.75;
    font-size: 0.96rem;
    font-weight: 500;
    text-align: left;
    hyphens: auto;
+   color: var(--testimonialCardTextColor);
 }
 
 .slider-btn {
@@ -2001,7 +2046,7 @@ a[class^='cta-button']:hover::before {
    font-size: 1rem;
    font-weight: 500;
    line-height: 1.5;
-   color: var(--color-augmented-900);
+   color: var(--contactParagraphColor);
    hyphens: auto;
 
 }
@@ -2101,7 +2146,7 @@ a[class^='cta-button']:hover::before {
    width: 100%;
    top: 8px;
    font-weight: 400;
-   color: var(--color-neutral-800);
+   color: var(--contactFormLabelColor);
    transition: 0.3s;
    letter-spacing: var(--ls-letter-spacing-100);
 }
@@ -2362,7 +2407,7 @@ textarea.has-content ~ label {
           footer section
 ==================================================================*/
 .footer {
-   background-color: var(--color-primary-900-footer);
+   /*background-color: var(--color-augmented-900);*/
 }
 
 .footer-container {
@@ -2449,7 +2494,8 @@ textarea.has-content ~ label {
 .footer-contact-link:focus,
 .footer-social-link:hover,
 .footer-social-link:focus {
-   color: var(--color-augmented-300);
+   color: var(--color-primary-300);
+   transform: translateY(-2px);
 }
 
 .footer-social-list {

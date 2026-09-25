@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
    const root = document.documentElement;
    const lightDarkButton = document.getElementById('lightDarkButton');
    const icon = document.getElementById('lightDarkIcon');
-   const saveTheme = localStorage.getItem('agency-theme');
+
    const menuButton = document.getElementById('menuButton');
    const navbarList = document.getElementById('navbarList');
    const navbar = document.getElementById('navbar');
@@ -115,27 +115,40 @@ document.addEventListener('DOMContentLoaded', function () {
 
    let isPaused = false;
 
-
-
    /************************* light/dark theme *************************/
-   if (saveTheme) {
-      root.setAttribute('data-theme', saveTheme);
+
+   function setTheme(theme) {
+      if (theme === 'dark') {
+         root.setAttribute('data-theme', 'dark');
+
+         // Dark page → show sun, because clicking it switches to light mode
+         icon.src = './assets/img/theme/sun.png';
+         icon.alt = 'Switch to light mode';
+      } else {
+         root.removeAttribute('data-theme');
+
+         // Light page → show moon, because clicking it switches to dark mode
+         icon.src = './assets/img/theme/moon.png';
+         icon.alt = 'Switch to dark mode';
+      }
+
+      localStorage.setItem('agency-theme', theme);
    }
 
-   lightDarkButton.addEventListener('click', function () {
-      icon.src = icon.src.includes('moon') ? './assets/img/theme/sun.png' : './assets/img/theme/moon.png';
-      const currentTheme = root.getAttribute('data-theme');
+// Apply saved theme when the page loads
+   const savedTheme = localStorage.getItem('agency-theme') || 'light';
+   setTheme(savedTheme);
+
+   lightDarkButton.addEventListener('click', () => {
+      const currentTheme = root.getAttribute('data-theme') === 'dark'
+         ? 'dark'
+         : 'light';
+
       const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
 
-      if (nextTheme === 'light') {
-         root.removeAttribute('data-theme');
-         localStorage.setItem('agency-theme', 'light');
-
-      } else {
-         root.setAttribute('data-theme', 'dark');
-         localStorage.setItem('agency-theme', 'dark');
-      }
+      setTheme(nextTheme);
    });
+
 
    /*   ctaButton.addEventListener('click', function () {
          navLinks.forEach((item) => item.classList.remove('active'));
