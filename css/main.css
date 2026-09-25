@@ -1165,6 +1165,7 @@ a[class^='cta-button']:hover::before {
    line-height: 1.5;
    color: var(--headerParagraphColor);
    text-align: center;
+   hyphens: auto;
 
 }
 
@@ -1173,6 +1174,13 @@ a[class^='cta-button']:hover::before {
    align-items: center;
    justify-content: space-evenly;
    gap: 1rem;
+}
+
+@media screen and (max-width: 365px) {
+   .header-buttons a.primary-button,
+   .header-buttons a.outline-button {
+      font-size: 0.875rem;
+   }
 }
 
 /*===============================================================
