@@ -37,18 +37,11 @@ document.addEventListener('DOMContentLoaded', function () {
    const root = document.documentElement;
    const lightDarkButton = document.getElementById('lightDarkButton');
    const icon = document.getElementById('lightDarkIcon');
-
    const menuButton = document.getElementById('menuButton');
    const navbarList = document.getElementById('navbarList');
    const navbar = document.getElementById('navbar');
    const navbarLogo = document.getElementById('navbar-logo-brand');
    const homeLink = document.getElementById('navbar-home-link');
-   const aboutLink = document.getElementById('navbar-about-link');
-   const learnMoreLink = document.getElementById('learn-more-link');
-   const ctaButton = document.getElementById('ctaButton');
-   const ctaButtonTwo = document.getElementById('ctaButtonTwo');
-   const servicesLink = document.getElementById('navbar-services-link');
-   const aboutButtonLink = document.getElementById('about-button');
    const menuToggleBreakPoint = 821;
 
    const navLinks = document.querySelectorAll('.navbar-list-link, .footer-navigation-link');
@@ -149,22 +142,6 @@ document.addEventListener('DOMContentLoaded', function () {
       setTheme(nextTheme);
    });
 
-
-   /*   ctaButton.addEventListener('click', function () {
-         navLinks.forEach((item) => item.classList.remove('active'));
-         servicesLink.classList.add('active');
-      });
-
-      ctaButtonTwo.addEventListener('click', function () {
-         navLinks.forEach((item) => item.classList.remove('active'));
-         servicesLink.classList.add('active');
-      });
-
-      aboutButtonLink.addEventListener('click', function () {
-         navLinks.forEach((item) => item.classList.remove('active'));
-         servicesLink.classList.add('active');
-      });*/
-
    if (window.innerWidth <= menuToggleBreakPoint) {
 
       menuButton.addEventListener('click', function () {
@@ -181,21 +158,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
    }
 
-
-   /*   navLinks.forEach(link => {
-         link.addEventListener('click', function () {
-            navLinks.forEach((item) => item.classList.remove('active'));
-            this.classList.add('active');
-         });
-      });
-
-      footerLinks.forEach(link => {
-         link.addEventListener('click', function () {
-            footerLinks.forEach((item) => item.classList.remove('active'));
-            this.classList.add('active');
-         })
-      })*/
-
    navbarLogo.addEventListener('click', function () {
       navLinks.forEach((item) => item.classList.remove('active'));
       homeLink.classList.add('active');
@@ -211,14 +173,6 @@ document.addEventListener('DOMContentLoaded', function () {
          menuButton.classList.remove('is-open');
       }
    });
-
-
-
-   /*learnMoreLink.addEventListener('click', function () {
-      navLinks.forEach((item) => item.classList.remove('active'));
-      aboutLink.classList.add('active');
-
-   });*/
 
 
    /*===============================================================
@@ -668,7 +622,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
       performValidForm();
    }
-
 
    nameInput.addEventListener('keyup', validateName);
    emailInput.addEventListener('keyup', validateEmail);

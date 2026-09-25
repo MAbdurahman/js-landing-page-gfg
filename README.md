@@ -28,3 +28,5 @@ https://github.com/MAbdurahman/js-landing-page-gfg.git
 <p>Then, in the browser open the index.html file</p>
 
 ### [Live preview](https://js-landing-page-gfg.vercel.app/)
+
+<img width="800" height="376" alt="Image" src="https://github.com/user-attachments/assets/445c0e1f-8199-4a7c-9c19-c6c3e5aa6c2a" />
