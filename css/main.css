@@ -302,6 +302,7 @@
    --testimonialParagraphColor: var(--color-augmented-900);
    --testimonialCardBackgroundColor: var(--color-neutral-100);
    --testimonialCardText: var(--color-neutral-900);
+   --starsColor: var(--color-primary-900);
 
    --contactParagraphColor: var(--color-augmented-900);
    --contactFormLabelColor: var(--color-neutral-800);
@@ -356,8 +357,10 @@
    --faqAnswerColor: var(--color-augmented-100);
 
    --testimonialParagraphColor: var(--color-augmented-000);
-   --testimonialCardBackgroundColor: var(--color-neutral-700);
+   --testimonialCardBackgroundColor: var(--color-neutral-800);
    --testimonialCardTextColor: var(--color-neutral-000);
+
+   --starsColor: var(--color-primary-500);
 
    --contactParagraphColor: var(--color-augmented-000);
    --contactFormLabelColor: var(--color-neutral-100);
@@ -1913,7 +1916,7 @@ a[class^='cta-button']:hover::before {
 
 .stars {
    font-size: 1.2rem;
-   color: var(--color-primary-900);
+   color: var(--starsColor);
    letter-spacing: 2px;
    margin-bottom: 14px;
 }
