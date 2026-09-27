@@ -604,9 +604,9 @@ a[class^='primary-button'] {
 }
 
 button[class^='primary-button']:hover,
-button[class^='primary-button']:focus,
+button[class^='primary-button']:focus-visible,
 a[class^='primary-button']:hover,
-a[class^='primary-button']:focus {
+a[class^='primary-button']:focus-visible {
    cursor: pointer;
    color: var(--color-neutral-000);
 }
@@ -642,9 +642,9 @@ a[class^='outline-button'] {
 }
 
 button[class^='outline-button']:hover,
-button[class^='outline-button']:focus,
+button[class^='outline-button']:focus-visible,
 a[class^='outline-button']:hover,
-a[class^='outline-button']:focus {
+a[class^='outline-button']:focus-visible {
    cursor: pointer;
    color: var(--color-neutral-000);
 }
@@ -874,9 +874,9 @@ a[class^='cta-button'] {
    -webkit-transition: background-color 0.3s, color 0.3s, opacity 0.3s;
 }
 
-button[class^='cta-button']:focus,
+button[class^='cta-button']:focus-visible,
 button[class^='cta-button']:hover,
-a[class^='cta-button']:focus,
+a[class^='cta-button']:focus-visible,
 a[class^='cta-button']:hover {
    background-color: var(--color-primary-800);
    color: var(--color-neutral-100);
