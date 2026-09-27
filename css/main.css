@@ -677,12 +677,18 @@ button[class='pause-button'] {
    -webkit-transition: background-color 0.3s, color 0.3s, opacity 0.3s;
 }
 
-button[class='pause-button']:hover,
-button[class='pause-button']:focus,
-button[aria-pressed='true'] {
+button.pause-button:hover {
    background-color: var(--color-neutral-100);
    color: var(--color-primary-900);
 }
+
+button.pause-button:focus-visible {
+   background-color: var(--color-neutral-100);
+   color: var(--color-primary-900);
+   outline: 3px solid var(--color-primary-900);
+   outline-offset: 3px;
+}
+
 
 /*===============================================================
           navigation
@@ -1449,55 +1455,10 @@ a[class^='cta-button']:hover::before {
 
 }
 
-/* Fade edges so the loop feels clean */
-/*.marquee-slider:before,
-.marquee-slider:after {
-   content: '';
-   position: absolute;
-   top: 0;
-   bottom: 0;
-   z-index: 2;
-   width: 80px;
-   pointer-events: none;
-}
-
-.marquee-slider::before {
-   left: 0;
-   background: linear-gradient(to right, var(--marqueeSliderColor), rgba(250, 250, 250, 0));
-}
-
-.marquee-slider::after {
-   right: 0;
-   background: linear-gradient(to left, var(--marqueeSliderColor), rgba(250, 250, 250, 0));
-}*/
-
-/*.marquee-track {
-   width: max-content;
-   display: flex;
-   padding: 0;
-}
-
-.marquee-track.left {
-   animation: scroll-left 18s linear infinite;
-}
-
-.marquee-track.right {
-   animation: scroll-right 18s linear infinite;
-}
-
-.marquee-slider.is-paused .marquee-track {
+.marquee-slider.is-paused .logo-left,
+.marquee-slider.is-paused .logo-right {
    animation-play-state: paused;
-}*/
-
-/*.logo {
-   height: 32px;
-   width: 152px;
-   flex: 0 0 auto;
-   object-fit: contain;
-   user-select: none;
-   -webkit-user-drag: none;
-   filter: grayscale(10%);
-}*/
+}
 
 /* Optional: prefers-reduced-motion */
 @media (prefers-reduced-motion: reduce) {
