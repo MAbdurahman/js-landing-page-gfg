@@ -306,6 +306,8 @@
 
    --contactParagraphColor: var(--color-augmented-900);
    --contactFormLabelColor: var(--color-neutral-800);
+   --utilsEffectFocusLabelColor: var(--color-primary-900);
+   --utilsEffect07Color: var(--color-neutral-800);
 
 }
 
@@ -324,7 +326,7 @@
    --sectionTwoBackgroundColor: var(--color-neutral-800);
    --sectionThreeBackgroundColor: var(--color-neutral-900);
    --sectionFourBackgroundColor: var(--color-neutral-600);
-   --sectionFiveBackgroundColor: var(--color-neutral-400);
+   --sectionFiveBackgroundColor: var(--color-neutral-800);
    --footerBackgroundColor: var(--color-neutral-900);
 
    --navbarLogoBrandColor: var(--color-augmented-000);
@@ -364,6 +366,9 @@
 
    --contactParagraphColor: var(--color-augmented-000);
    --contactFormLabelColor: var(--color-neutral-100);
+
+   --utilsEffectFocusLabelColor: var(--color-primary-500);
+   --utilsEffect07Color: var(--color-neutral-200);
 
 }
 
@@ -2091,7 +2096,7 @@ a[class^='cta-button']:hover::before {
    padding: 8px 16px;
    font: 20/1.5 var(--font-body);
    letter-spacing: var(--ls-letter-spacing-100);
-   color: var(--color-neutral-800);
+   color: var(--utilsEffect07Color);
    background-color: transparent;
    border: 1px solid var(--color-neutral-500);
    border-radius: var(--br-border-radius-300);
@@ -2139,7 +2144,7 @@ a[class^='cta-button']:hover::before {
    top: -18px;
    font-size: 14px;
    font-weight: 600;
-   color: var(--color-primary-900);
+   color: var(--utilsEffectFocusLabelColor);
    transition: 0.3s;
 }
 

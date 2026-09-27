@@ -426,8 +426,10 @@ document.addEventListener('DOMContentLoaded', () => {
    let messagePrompt = document.getElementById('contact-form-message-prompt');
    let message = '';
 
-   const successColor = '#166534';
-   const alertColor = '#991B1B';
+   /*const successColor = '#166534';*/
+   const successColor = '#4bd704';
+   /*const alertColor = '#991B1B';*/
+   const alertColor = '#bc0404';
    const toastContainer = document.querySelector('.toast-container');
    const contactForm = document.getElementById('contact-form');
 
