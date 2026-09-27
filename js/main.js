@@ -72,6 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
    function getNavbarHeight() {
       return navbar.offsetHeight;
    }
+
    /**************** update active links while scrolling ****************/
    const observer = new IntersectionObserver(() => {
          const visibleSections = sections.filter(section => {
@@ -407,6 +408,7 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
    console.log('DOMContentLoaded is loaded and ready to use');
 
+   const root = document.documentElement;
    const fullnamePattern = /^([a-zA-Z-]{2,}\s[a-zA-z]{1,}'?-?[a-zA-Z]{1,}\s?([a-zA-Z]{1,})?)(,? (?:[JS]r\.?|II|III|IV))?$/g;
    const emailPattern = /^[!A-Z0-9#$&?*^~_%+-]+(\.[A-Z0-9!_%+-^]+)*?@[A-Z0-9-]+([A-Z0-9.-])*\.[A-Z]{2,}$/i;
 
@@ -426,10 +428,10 @@ document.addEventListener('DOMContentLoaded', () => {
    let messagePrompt = document.getElementById('contact-form-message-prompt');
    let message = '';
 
-   /*const successColor = '#166534';*/
-   const successColor = '#4bd704';
-   /*const alertColor = '#991B1B';*/
-   const alertColor = '#bc0404';
+   const successColor = root.getAttribute('data-theme') === 'dark'
+      ? '#4bd704' : '#166534';
+   const alertColor = root.getAttribute('data-theme') === 'dark'
+      ? '#bc0404' : '#991b1b';
    const toastContainer = document.querySelector('.toast-container');
    const contactForm = document.getElementById('contact-form');
 

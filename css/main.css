@@ -2088,6 +2088,11 @@ a[class^='cta-button']:hover::before {
    margin: 20px 3%;
 }
 
+.contact-form-input-prompt-textarea,
+.contact-form-input-prompt {
+   font-weight: 500;
+}
+
 
 .utils-effect-07 {
    position: relative;
